@@ -11,7 +11,7 @@
                 "tests": [
                     {
                         "id": "m4.01",
-                        "description": "Basic, correct manifest, usable to test the local setup",
+                        "description": "Basic, correct manifest, usable to test a local setup",
                         "actions": "Output the manifest",
                         "errors": "none",
                         "media-type": "application/ld+json"
@@ -45,7 +45,7 @@
                     {
                         "id": "m4.4.01",
                         "description": "The global language value can be set as part of the '@context' array",
-                        "actions": "Language en set for all strings",
+                        "actions": "Language 'en' set for all strings",
                         "errors": "none",
                         "media-type": "application/ld+json"
                     },
@@ -73,7 +73,7 @@
                     {
                         "id": "m4.4.05",
                         "description": "If several global language, resp. base direction values are set, the last one wins in both cases",
-                        "actions": "Strings should be set with language:en and direction:ltr",
+                        "actions": "Strings should be set with 'language:en' and 'direction:ltr'",
                         "errors": "none",
                         "media-type": "application/ld+json"
                     }
@@ -152,14 +152,14 @@
                     },
                     {
                         "id": "m4.7.1.2.02",
-                        "description": "The value of 'accessModeSufficient' has a strict structure per schema.org",
+                        "description": "The value of 'accessModeSufficient' has a strict structure per schema.org; illegal values should be removed",
                         "actions": "The illegal value (visual) should be removed",
                         "errors": "Validation error on the incorrect data",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.2.03",
-                        "description": "The value of 'accessModeSufficient' has a strict structure per schema.org",
+                        "description": "The value of 'accessModeSufficient' has a strict structure per schema.org; illegal values should be removed",
                         "actions": "Both values being invalid, the key should be removed altogether",
                         "errors": "Validation error on the incorrect data",
                         "media-type": "application/ld+json"
@@ -172,14 +172,14 @@
                 "tests": [
                     {
                         "id": "m4.7.1.3.01",
-                        "description": "All URL values can be relative, expanded via base",
+                        "description": "All URL values for 'url' can be relative, expanded via base",
                         "actions": "Value of URL should be absolute",
                         "errors": "none",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.3.02",
-                        "description": "All URL values can be relative, expanded via basee",
+                        "description": "All URL values for an 'url' within an array can be relative, expanded via base",
                         "actions": "Value of all URLs in the array should be absolute",
                         "errors": "none",
                         "media-type": "application/ld+json"
@@ -241,8 +241,8 @@
                     {
                         "id": "m4.7.1.5.04",
                         "description": "All creators defined in the specification, and only those, should have the same behaviors (copy of m47502)",
-                        "actions": "All the defined creator values should be turned into array; this does not apply to extra term (\"auteur\")",
-                        "errors": "validation error on missing name",
+                        "actions": "All the defined creator values should be turned into array; this does not apply to extra terms like 'auteur'",
+                        "errors": "none",
                         "media-type": "application/ld+json"
                     }
                 ]
@@ -253,28 +253,28 @@
                 "tests": [
                     {
                         "id": "m4.7.1.6.01",
-                        "description": "Duration should have the right ISO format",
+                        "description": "Duration should have the right ISO format (incorrect value)",
                         "actions": "Duration should be removed from output",
                         "errors": "Validation error on incorrect duration format",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.6.02",
-                        "description": "Duration should have the right ISO format",
+                        "description": "Duration should have the right ISO format (correct value)",
                         "actions": "Duration value should be present in the output",
                         "errors": "none",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.6.03",
-                        "description": "Duration should have the right ISO format (also in a linked resource)",
+                        "description": "Duration should have the right ISO format also in a linked resource (incorrect value)",
                         "actions": "Duration should be removed from output",
                         "errors": "Validation error on incorrect duration format",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.6.04",
-                        "description": "Duration should have the right ISO format (also in a linked resource)",
+                        "description": "Duration should have the right ISO format also in a linked resource (correct value)",
                         "actions": "Duration value should be present in the output",
                         "errors": "none",
                         "media-type": "application/ld+json"
@@ -287,14 +287,14 @@
                 "tests": [
                     {
                         "id": "m4.7.1.7.01",
-                        "description": "Both 'datePublished' and 'dateModified' must be in ISO format",
+                        "description": "Both 'datePublished' and 'dateModified' must be in ISO format (incorrect values)",
                         "actions": "Both 'datePublished' and 'dateModified' are incorrect, and should be removed from output",
                         "errors": "incorrect publication dates",
                         "media-type": "application/ld+json"
                     },
                     {
                         "id": "m4.7.1.7.02",
-                        "description": "Both 'datePublished' and 'dateModified' must be in ISO format",
+                        "description": "Both 'datePublished' and 'dateModified' must be in ISO format (correct values)",
                         "actions": "Both 'datePublished' and 'dateModified' are correct, and  should be present in the output",
                         "errors": "none",
                         "media-type": "application/ld+json"
@@ -611,7 +611,7 @@
                         "id": "m6.06",
                         "format": "html",
                         "description": "There should be either a 'name' or a usable 'title' in the Primary Entry Page.",
-                        "actions": "A \"no title\" name should be added",
+                        "actions": "An application-dependent name should be added",
                         "errors": "Validation error on a missing default title",
                         "media-type": "text/html"
                     }
