@@ -19,6 +19,34 @@
                 ]
             },
             {
+                "section": "§4.2.5. URLs",
+                "href": "https://www.w3.org/TR/pub-manifest/#value-url",
+                "tests": [
+                    {
+                        "id": "m4.2.5.01",
+                        "description": "In case of an embedded manifest, 'base' is the URL of the embedded document",
+                        "actions": "The absolute value of the chapter url should be relative to the URL of the embedding document",
+                        "errors": "none",
+                        "media-type": "text/html"
+                    },
+                    {
+                        "id": "m4.2.5.02",
+                        "description": "In case of an embedded manifest, 'base' is the value of the base tag of the embedded document",
+                        "actions": "The absolute value of the chapter url should be 'https://www.example.org/chapter1.html' in the the document",
+                        "errors": "none",
+                        "media-type": "text/html"
+                    },
+                    {
+                        "id": "m4.2.5.03",
+                        "description": "In case of an linked manifest, 'base' is the URL of the linked JSON manifest",
+                        "actions": "The absolute value of the chapter url should be relative to url of the linked manifest",
+                        "errors": "none",
+                        "media-type": "text/html"
+                    }
+
+                ]
+            },
+            {
                 "section": "§4.3 Manifest contexts",
                 "href": "https://www.w3.org/TR/pub-manifest/#manifest-context",
                 "tests": [

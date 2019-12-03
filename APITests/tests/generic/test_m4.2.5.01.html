@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entry point with embedded manifest</title>
+    <link rel="publication" href="#manifest" />
+    <script id='manifest' type='application/ld+json'>
+        {
+            "@context" : ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+            "type": "CreativeWork",
+            "name" : "My Wonderful Book",
+            "id" : "urn:isbn:1234567890",
+            "url": "https://example.org/book",
+            "conformsTo": "https://www.w3.org/TR/pub-manifest/",
+            "readingOrder": [
+                "chapter1.html"
+            ]
+        }
+    </script>
+</head>
+<body>
+    <p>This is just a fake entry point.</p>
+</body>
+</html>
