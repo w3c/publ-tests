@@ -1,0 +1,12 @@
+{
+    "@context" : ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+    "type": "CreativeWork",
+    "name" : "My Wonderful Book",
+    "author" : "John Doe",
+    "id" : "urn:isbn:1234567890",
+    "url": "https://example.org/book",
+    "conformsTo": "https://www.w3.org/TR/pub-manifest/",
+    "readingOrder": [
+        "chapter1.html"
+    ]
+}

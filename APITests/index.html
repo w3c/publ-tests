@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
+    <title>
+        Implementation report for the Publication Manifest and Audiobooks specifications
+    </title>
+    <link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet'/>
+    <link href='common/css/style.css' rel='stylesheet'/>
+    <script src="common/js/display_scores.js"></script>
+    <script src='common/js/doc-toc.js'></script>
+        <script>
+        const test_file = './tests/index.json';
+        const impl_index = './results/index.json'
+        async function display() {
+            const tests = await get_json(test_file);
+            const implementations = await get_implementations(impl_index);
+
+            const generic_tests = document.getElementById('generic_tests');
+            const generic_scores = display_test_groups(generic_tests, tests.generic, implementations);
+
+            const audiobook_tests = document.getElementById('audiobook_tests');
+            const audio_scores = display_test_groups(audiobook_tests, tests.audiobooks, implementations);
+            
+            display_scores([...generic_scores, ...audio_scores], implementations);
+            display_implementations(implementations);
+
+            // Generate the TOC
+            handleDocToc();
+        }
+        window.addEventListener('load', display);   
+    </script>
+</head>
+
+<body>
+    <header>
+        <p>
+            <a href='http://www.w3.org/'>
+                <img alt='W3C' height='48' src='https://www.w3.org/Icons/w3c_home' width='72' />
+            </a>
+        </p>
+        <h1>
+          Implementation report on Publication Manifest Processing.
+        </h1>
+        <nav role='doc-toc' data-options='dynamic max_depth=3 use_sections'></nav>
+    </header>
+    <main>
+        <p>These tests, and the implementation report, refers to the <a href="https://www.w3.org/TR/pub-manifest/#manifest-processing">“Processing a Manifest”</a> section of the <a href="https://www.w3.org/TR/pub-manifest">“Publication Manifest”</a> specification, as well as the <a href="https://www.w3.org/TR/audiobooks/#audio-manifest-processing">“Manifest Processing”</a> section of the <a href="https://www.w3.org/TR/audiobooks">“Audiobooks”</a> specification. (The audiobooks specification defines a set of extensions to the generic processing rules.)</p>
+
+        <p>The implementations that have been submitted for this report are:</p>
+        <dl id=implementations>
+        </dl>
+
+        <section>
+            <h2>Test results overview</h2>
+
+            <table id='test_results' class='zebra'>
+                <thead>
+                    <tr id='header_row'>
+                        <th>No.</th>
+                        <th>Test</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id='table_body'>
+                </tbody>
+            </table>
+        </section>
+
+        <section id='test_descriptions'>
+            <h2>Description of the individual tests</h2>
+            <section id='generic_tests' data-tochidden>
+                <h3>Generic Manifest Tests</h3>
+            </section>
+            <section id='audiobook_tests' data-tochidden>
+                <h3>Audiobook Specific Tests</h3>
+
+            </section>
+        </section>
+
+        <section>
+            <h2>Contributing to the report</h2>
+            <p>The actions below are described as adding/modifying files; this should be understood as changes on submitter’s own copy which should then be submitted, via a Pull Request, to the test repository.</p>
+            <section>
+                <h3>Adding a new implementation report</h3>
+                <ol>
+                    <li>Create a new JSON report file. The file format is simple: 
+                        <ul>
+                            <li>a field <code>$name</code> with, as value, the name of the implementation (will be used as the column label for the results;</li>
+                            <li>a field <code>$description</code> with, as value, the short description of the implementation;</li>
+                            <li>an optional field <code>$href</code> with, as value, a URL to the implementation page;</li>
+                            <li>for each implemented test add a field with the test code and a boolean value on whether the test is passed or not (remove the entry if it was not used for testing).</li>
+                        </ul>
+                        <p>(See, for example, <a href="./results/PubManifest.json"><code>PubManifest.json</code></a>.)</p>
+                    </li>
+                    <li>Put the new report file into the <code>./results</code> folder (use, preferably the name of the implementation as file name for an easier management).</li>
+                    <li>Modify the <a href="./results/index.json"><code>./results/index.json</code></a> by adding the file name of the report file without the extension.</li>
+                </ol>        
+            </section>
+            <section>
+                <h2>Modifying an existing implementation report</h2>
+                <p>Provide a new pull request for the updated implementation JSON file.</p>
+            </section>
+            <section>
+                <h3>Adding a new test</h3>
+                <ol>
+                    <li>Add the new test to the <code>tests/generic</code> or <code>tests/audio</code> subdirectory, following the numbering scheme used in the current tests for the names;</li>
+                    <li>Extend the <a href="./tests/index.json"><code>./tests/index.json</code></a> file with the relevant information.</li>
+                </ol>
+            </section>
+
+
+        </section>
+    </main>
+</body>
+</html>

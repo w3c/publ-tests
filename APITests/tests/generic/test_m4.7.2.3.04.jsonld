@@ -1,0 +1,24 @@
+{
+    "@context" : ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+    "type": "CreativeWork",
+    "name" : "My Wonderful Book",
+    "id" : "urn:isbn:1234567890",
+    "url": "https://example.org/book",
+    "conformsTo": "https://www.w3.org/TR/pub-manifest/",
+    "readingOrder": [
+        "chapter1.html",
+        "link3.html#fragment"
+    ],
+    "resources": [
+        "link1.html"
+    ],
+    "links": [
+        "link1.html",
+        "link2.html",
+        "link1.html#fragment",
+        "link3.html",
+        "link2.html",
+        "chapter1.html",
+        "link4.html"
+    ]
+}

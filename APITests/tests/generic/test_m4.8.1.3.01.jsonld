@@ -1,0 +1,29 @@
+{
+    "@context" : ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+    "type": "CreativeWork",
+    "name" : "My Wonderful Book",
+    "id" : "urn:isbn:1234567890",
+    "url": "https://example.org/book",
+    "conformsTo": "https://www.w3.org/TR/pub-manifest/",
+    "readingOrder": [
+        "chapter1.html"
+    ],
+    "resources": [
+        {
+            "name": "TOC #1",
+            "description": "This is TOC #1",
+            "url": "toc1.html",
+            "rel": ["contents"]
+        },
+        {
+            "name": "This is another resource",
+            "url": "something.svg"
+        },
+        {
+            "name": "TOC #2",
+            "description": "This is TOC #2",
+            "url": "toc2.html",
+            "rel": ["contents"]
+        }
+    ]
+}

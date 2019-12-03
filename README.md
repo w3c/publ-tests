@@ -3,11 +3,9 @@
 
 The repository contains different test suites that are used for various projects in the Publishing@W3C activity.
 
-## Test suite families
+## Test Suites
 
-### Publishing Working Group CR tests
-
-Tests used for the CR testing of the [Publication Manifest](https://www.w3.org/TR/pub-manifest) and [Audiobooks](https://www.w3.org/TR/audiobooks) documents.
+- **[API Tests](./APITests):** Tests for [Manifest Processing](https://www.w3.org/TR/pub-manifest/#manifest-processing) algorithm of the [Publication Manifest](https://www.w3.org/TR/pub-manifest) document, as well as the [extension thereof](https://www.w3.org/TR/audiobooks/#audio-manifest-processing) defined in the [Audiobooks](https://www.w3.org/TR/audiobooks) document.
 
 ---
 

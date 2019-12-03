@@ -1,0 +1,40 @@
+nav[role='doc-toc'] a {
+    text-decoration: none;
+}
+
+nav[role='doc-toc'] a:hover {
+    text-decoration: underline;
+    background: yellow;
+    color: red;
+}
+
+nav[role='doc-toc'] ul {
+    list-style-type: none;
+    margin-left: 1.5em;
+    padding-left: 0;
+}
+
+.tocvisible, .tochidden {
+    cursor: pointer;
+}
+
+.tocvisible:before {
+    content: "▾ ";
+    font-size: 110%;
+    font-family: monospace;
+}
+
+.tochidden:before {
+    content: "‣ ";
+    font-size: 110%;
+    font-family: monospace;
+}
+
+/* Careful: the content below are two non-breakable spaces (in UTF-8)! */
+span.tocnumber:not(.tocvisible):not(.tochidden):before {
+    content: "  ";
+    font-size: 110%;
+    font-family: monospace;
+}
+
+span.tochidden ~ ul { display: none }

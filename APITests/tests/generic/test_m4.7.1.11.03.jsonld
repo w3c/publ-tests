@@ -1,0 +1,28 @@
+{
+    "@context" : [
+        "https://schema.org",
+        "https://www.w3.org/ns/pub-context",
+         {
+            "language": "ar"
+         }
+    ],
+    "type": "CreativeWork",
+    "id" : "urn:isbn:1234567890",
+    "url": "https://example.org/book",
+    "conformsTo": "https://www.w3.org/TR/pub-manifest/",
+    "readingOrder": [
+        "chapter1.html"
+    ],
+    "name" : [
+        {
+            "value": "HTML و CSS: تصميم و إنشاء مواقع الويب",
+            "direction": "rtl"
+        },
+        {
+            "value"    : "HTML and CSS: Design and Build Websites",
+            "language" : "en",
+            "direction": "ltr"
+        }
+    ]
+
+}
