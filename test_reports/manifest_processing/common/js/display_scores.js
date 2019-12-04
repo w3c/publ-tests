@@ -48,9 +48,10 @@ async function get_implementations(impl_index) {
  * @param group_section_dom - The HTML element (section) where the test descriptions should go
  * @param document_tests - An object representing a series of tests, plus some metadata
  * @param implementations - List of implementation result objects
+ * @param test_index - the reference to the test_index file; used to generate the URLs for the tests themselves
  * @returns - list of test scores
  */
-function display_test_groups(group_section_dom, document_tests, implementations) {
+function display_test_groups(group_section_dom, document_tests, implementations, test_index) {
     const add_item = (parent, label, content) => {
         const dt = document.createElement('dt');
         dt.textContent = label;
@@ -59,6 +60,8 @@ function display_test_groups(group_section_dom, document_tests, implementations)
         dd.innerHTML = content;
         parent.append(dd);
     };
+    const base_components = test_index.split('/');
+    const preamble = base_components.slice(0, base_components.length - 1);
     const document_scores = [];
     document_tests.tests.forEach((section_tests) => {
         // Tests are grouped by 'sections', referring to the relevant section of the spec
@@ -81,7 +84,7 @@ function display_test_groups(group_section_dom, document_tests, implementations)
             test_section_dom.append(h5);
             const format = test["media-type"] === "text/html" ? 'html' : 'jsonld';
             const fname = `test_${test.id}.${format}`;
-            const fileref = test.id.startsWith('m') ? `./tests/generic/${fname}` : `./tests/audiobooks/${fname}`;
+            const fileref = [...preamble, fname].join('/');
             const dl = document.createElement('dl');
             add_item(dl, 'Description:', test.description);
             add_item(dl, 'Expected action(s):', test.actions);
@@ -111,9 +114,10 @@ function display_test_groups(group_section_dom, document_tests, implementations)
  * Add the description of each implementation to the preamble text.
  *
  * @param implementations - array of implementation objects.
+ * @param prefix - string to prefix the generic `id` attribute of the target element
  */
-function display_implementations(implementations) {
-    const description = document.getElementById('implementations');
+function display_implementations(implementations, prefix) {
+    const description = document.getElementById(`${prefix}_implementations`);
     implementations.forEach((impl) => {
         // Expand the description
         const dl = document.createElement('dt');
@@ -133,10 +137,11 @@ function display_implementations(implementations) {
  *
  * @param scores - array of score objects, each representing a row in the result table.
  * @param implementations - array of implementation objects; used to add the right headers in the table.
+ * @param prefix - string to prefix the generic `id` attribute of the target element
  */
-function display_scores(scores, implementations) {
+function display_scores(scores, implementations, prefix) {
     // First step: expand the header fields, as well as the generic description with the list of available implementations
-    const header_row = document.getElementById('header_row');
+    const header_row = document.getElementById(`${prefix}_header_row`);
     implementations.forEach((impl) => {
         // Expand the table header
         const th = document.createElement('th');
@@ -144,7 +149,7 @@ function display_scores(scores, implementations) {
         header_row.append(th);
     });
     // Go through each test to set a new row
-    const table_body = document.getElementById('table_body');
+    const table_body = document.getElementById(`${prefix}_table_body`);
     let number = 1;
     scores.forEach((item) => {
         const tr = document.createElement('tr');
@@ -172,5 +177,14 @@ function display_scores(scores, implementations) {
             tr.append(td_score);
         });
     });
+}
+async function display_test_suite(test_block) {
+    const { test_index, impl_index, prefix } = test_block;
+    const tests = await get_json(test_index);
+    const implementations = await get_implementations(impl_index);
+    const test_listing = document.getElementById(`${prefix}_tests`);
+    const scores = display_test_groups(test_listing, tests, implementations, test_index);
+    display_scores(scores, implementations, prefix);
+    display_implementations(implementations, prefix);
 }
 //# sourceMappingURL=display_scores.js.map

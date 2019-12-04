@@ -75,7 +75,6 @@ interface Test {
     description  : string;
     actions      : string;
     errors       : string;
-    format?      : string;
     "media-type"?: string;
 }
 
@@ -92,9 +91,22 @@ interface SectionTests {
  * All tests for a document
  */
 interface DocumentTests {
+    date   : string;
     title  : string;
     href   : string;
     tests  : SectionTests[];
+}
+
+/**
+ * Information necessary to run the report generation
+ */
+interface TestBlock {
+    /** relative file name to the index.json file describing the tests */
+    test_index: string,
+    /** relative file name to the index.json file describing the implementations */
+    impl_index: string,
+    /** prefix to be used to find the right HTML Elements */
+    prefix: string
 }
 
 /**
@@ -105,9 +117,10 @@ interface DocumentTests {
  * @param group_section_dom - The HTML element (section) where the test descriptions should go
  * @param document_tests - An object representing a series of tests, plus some metadata
  * @param implementations - List of implementation result objects
+ * @param test_index - the reference to the test_index file; used to generate the URLs for the tests themselves
  * @returns - list of test scores
  */
-function display_test_groups(group_section_dom: HTMLElement, document_tests: DocumentTests, implementations: Implementation[]): TestScore[] {
+function display_test_groups(group_section_dom: HTMLElement, document_tests: DocumentTests, implementations: Implementation[], test_index: string): TestScore[] {
     const add_item = (parent: HTMLElement, label: string, content: string): void => {
         const dt: HTMLElement = document.createElement('dt');
         dt.textContent = label;
@@ -116,6 +129,9 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
         dd.innerHTML = content;
         parent.append(dd);
     };
+
+    const base_components: string[] = test_index.split('/');
+    const preamble: string[] = base_components.slice(0, base_components.length - 1);
 
     const document_scores: TestScore[] = [];
     document_tests.tests.forEach((section_tests: SectionTests) => {
@@ -144,7 +160,7 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
 
             const format: string = test["media-type"] === "text/html" ? 'html' : 'jsonld';
             const fname: string  = `test_${test.id}.${format}`;
-            const fileref: string = test.id.startsWith('m') ? `./tests/generic/${fname}` : `./tests/audiobooks/${fname}`;
+            const fileref: string = [...preamble, fname].join('/');
 
             const dl: HTMLElement = document.createElement('dl');
             add_item(dl, 'Description:', test.description);
@@ -177,9 +193,10 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
  * Add the description of each implementation to the preamble text.
  *
  * @param implementations - array of implementation objects.
+ * @param prefix - string to prefix the generic `id` attribute of the target element
  */
-function display_implementations(implementations: Implementation[]): void {
-    const description: HTMLElement = document.getElementById('implementations');
+function display_implementations(implementations: Implementation[], prefix: string): void {
+    const description: HTMLElement = document.getElementById(`${prefix}_implementations`);
 
     implementations.forEach((impl: Implementation): void => {
         // Expand the description
@@ -203,10 +220,11 @@ function display_implementations(implementations: Implementation[]): void {
  *
  * @param scores - array of score objects, each representing a row in the result table.
  * @param implementations - array of implementation objects; used to add the right headers in the table.
+ * @param prefix - string to prefix the generic `id` attribute of the target element
  */
-function display_scores(scores: TestScore[], implementations: Implementation[]): void {
+function display_scores(scores: TestScore[], implementations: Implementation[], prefix: string): void {
     // First step: expand the header fields, as well as the generic description with the list of available implementations
-    const header_row: HTMLElement = document.getElementById('header_row');
+    const header_row: HTMLElement = document.getElementById(`${prefix}_header_row`);
     implementations.forEach((impl: Implementation): void => {
         // Expand the table header
         const th: HTMLElement = document.createElement('th');
@@ -215,7 +233,7 @@ function display_scores(scores: TestScore[], implementations: Implementation[]):
     });
 
     // Go through each test to set a new row
-    const table_body: HTMLElement = document.getElementById('table_body');
+    const table_body: HTMLElement = document.getElementById(`${prefix}_table_body`);
     let number: number = 1;
     scores.forEach((item: TestScore) => {
         const tr: HTMLElement = document.createElement('tr');
@@ -247,4 +265,18 @@ function display_scores(scores: TestScore[], implementations: Implementation[]):
             tr.append(td_score);
         });
     });
+}
+
+
+async function display_test_suite(test_block: TestBlock) {
+    const {test_index, impl_index, prefix} = test_block;  
+
+    const tests = await get_json(test_index);
+    const implementations = await get_implementations(impl_index);
+
+    const test_listing = document.getElementById(`${prefix}_tests`);
+    const scores = display_test_groups(test_listing, tests, implementations, test_index);
+
+    display_scores(scores, implementations, prefix);
+    display_implementations(implementations, prefix)
 }
