@@ -11,21 +11,20 @@
     <script src="common/js/display_scores.js"></script>
     <script src='common/js/doc-toc.js'></script>
         <script>
-        const test_file = './tests/index.json';
-        const impl_index = './results/index.json'
+        const tests = [{
+            test_index: '../../publication_manifest/manifest_processing/tests/index.json',
+            impl_index: '../../publication_manifest/manifest_processing/reports/index.json',
+            prefix: 'publ_manifest'
+        }, {
+            test_index: '../../audiobooks/manifest_processing/tests/index.json',
+            impl_index: '../../audiobooks/manifest_processing/reports/index.json',
+            prefix: 'audiobooks'
+        }];
+
         async function display() {
-            const tests = await get_json(test_file);
-            const implementations = await get_implementations(impl_index);
-
-            const generic_tests = document.getElementById('generic_tests');
-            const generic_scores = display_test_groups(generic_tests, tests.generic, implementations);
-
-            const audiobook_tests = document.getElementById('audiobook_tests');
-            const audio_scores = display_test_groups(audiobook_tests, tests.audiobooks, implementations);
-            
-            display_scores([...generic_scores, ...audio_scores], implementations);
-            display_implementations(implementations);
-
+            tests.forEach((block) => {
+                const dummy = display_test_suite(block);
+            })
             // Generate the TOC
             handleDocToc();
         }
@@ -48,39 +47,67 @@
     <main>
         <p>These tests, and the implementation report, refers to the <a href="https://www.w3.org/TR/pub-manifest/#manifest-processing">“Processing a Manifest”</a> section of the <a href="https://www.w3.org/TR/pub-manifest">“Publication Manifest”</a> specification, as well as the <a href="https://www.w3.org/TR/audiobooks/#audio-manifest-processing">“Manifest Processing”</a> section of the <a href="https://www.w3.org/TR/audiobooks">“Audiobooks”</a> specification. (The audiobooks specification defines a set of extensions to the generic processing rules.)</p>
 
-        <p>The implementations that have been submitted for this report are:</p>
-        <dl id=implementations>
-        </dl>
-
         <section>
-            <h2>Test results overview</h2>
+            <h2>Test results</h2>
+            <section>
+                <h3>General publication manifest processing</h3>
 
-            <table id='test_results' class='zebra'>
-                <thead>
-                    <tr id='header_row'>
-                        <th>No.</th>
-                        <th>Test</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody id='table_body'>
-                </tbody>
-            </table>
+                <p>The implementations that have been submitted for this report are:</p>
+                <dl id=publ_manifest_implementations>
+                </dl>
+
+                <section>
+                    <h4>Test results overview</h4>
+                    <table id='publ_manifest_results' class='zebra'>
+                        <thead>
+                            <tr id='publ_manifest_header_row'>
+                                <th>No.</th>
+                                <th>Test</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id='publ_manifest_table_body'>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+
+            <section>
+                <h3>Audiobook manifest processing</h3>
+
+                <p>The implementations that have been submitted for this report are:</p>
+                <dl id=audiobooks_implementations>
+                </dl>
+
+                <section>
+                    <h4>Test results overview</h4>
+                    <table id='audiobooks_results' class='zebra'>
+                        <thead>
+                            <tr id='audiobooks_header_row'>
+                                <th>No.</th>
+                                <th>Test</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id='audiobooks_table_body'>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
         </section>
 
         <section id='test_descriptions'>
             <h2>Description of the individual tests</h2>
-            <section id='generic_tests' data-tochidden>
-                <h3>Generic Manifest Tests</h3>
+            <section id='publ_manifest_tests' data-tochidden>
+                <h3>Generic Publication Manifest Tests</h3>
             </section>
-            <section id='audiobook_tests' data-tochidden>
+            <section id='audiobooks_tests' data-tochidden>
                 <h3>Audiobook Specific Tests</h3>
-
             </section>
         </section>
 
         <section>
-            <h2>Contributing to the report</h2>
+            <h2>Contributing to the reports</h2>
             <p>The actions below are described as adding/modifying files; this should be understood as changes on submitter’s own copy which should then be submitted, via a Pull Request, to the test repository.</p>
             <section>
                 <h3>Adding a new implementation report</h3>

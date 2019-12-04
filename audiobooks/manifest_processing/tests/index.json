@@ -1,0 +1,146 @@
+{
+    "date": "2019-11-23",
+    "title": "Tests for the audiobooks manifest processing",
+    "href": "https://www.w3.org/TR/audiobooks/",
+    "tests": [
+        {
+            "section": "§4.2 Table of content",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-properties",
+            "tests": [
+                {
+                    "id": "a4.2.01",
+                    "format": "html",
+                    "description": "A manifest may be linked via a 'link' element in the primary entry page, with the TOC reference in the manifest",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "a4.2.02",
+                    "format": "html",
+                    "description": "A manifest without a TOC may be linked via a 'link' element in the primary entry page but with a TOC within the HTML file",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "a4.2.03",
+                    "format": "html",
+                    "description": "A manifest may be embedded via a 'script' element in the primary entry page, with the TOC reference in the manifest",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "a4.2.04",
+                    "format": "html",
+                    "description": "A manifest without a TOC embedded via a 'script' element in the primary entry page but with a TOC within the HTML file",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "a4.2.05",
+                    "format": "html",
+                    "description": "There must be a TOC, either in the manifest (linked or embedded) or in the Primary Entry Page",
+                    "actions": "Output the manifest",
+                    "errors": "Validation error on missing TOC",
+                    "media-type": "text/html"
+                }
+            ]
+        },
+        {
+            "section": "§5. Audio Manifest",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-manifest",
+            "tests": [
+                {
+                    "id": "a5.01",
+                    "description": "Correct audio manifest, usable for testing overall setup",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "a5.02",
+                    "description": "Minimally correct audio manifest, usable for testing overall setup",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§5.4 Publication types",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-type",
+            "tests": [
+                {
+                    "id": "a5.4.01",
+                    "description": "If no 'type' is set, the term 'Audiobook' is used",
+                    "actions": "The Audiobook type should be added",
+                    "errors": "Validation error (no type)",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§5.5 Properties",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-properties",
+            "tests": [
+                {
+                    "id": "a5.5.01",
+                    "description": "The audiobook defines a number of recommended properties (see §5.5)",
+                    "actions": "All the recommended properties in §5.5 should be reported as missing",
+                    "errors": "Validation errors for the list of recommended properties",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "a5.5.02",
+                    "description": "The global duration value, if present, should be the sum of the durations in the reading order",
+                    "actions": "Output the manifest",
+                    "errors": "Validation errors for inconsistent duration value",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "a5.5.03",
+                    "description": "All entries in `readingOrder` should have their duration values set",
+                    "actions": "Output the manifest",
+                    "errors": "Validation errors for the missing duration value",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§5.6 Default reading order",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-readingorder",
+            "tests": [
+                {
+                    "id": "a5.6.01",
+                    "description": "The 'readingOrder' must have at least one audio object",
+                    "actions": "Empty manifest should be returned",
+                    "errors": "Fatal error on missing audio file",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "a5.6.02",
+                    "description": "All 'readingOrder' values must be an audio object",
+                    "actions": "The manifest should be returned with last-but-one entry removed (only audio object remain)",
+                    "errors": "Validation error on that extra item",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§5.7 Resource List",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-resourcelist",
+            "tests": [
+                {
+                    "id": "a5.7.01",
+                    "description": "A cover page should be set",
+                    "actions": "Links with 'rel' including cover should be reported as missing",
+                    "errors": "Validation errors for missing cover",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        }
+    ]
+}
