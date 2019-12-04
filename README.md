@@ -5,8 +5,8 @@ The repository contains different test suites that are used for various projects
 
 ## Content
 
-- [`publication_manifest`](./publication_manifest/): tests related to the [Publication Manifest](https://www.w3.org/TR/pub-manifest) document.
-- [`audiobooks`](./audiobooks/): tests related to the [Audiobooks](https://www.w3.org/TR/audiobooks) document.
+- [`publication_manifest`](./publication_manifest): tests related to the [Publication Manifest](https://www.w3.org/TR/pub-manifest) document.
+- [`audiobooks`](./audiobooks): tests related to the [Audiobooks](https://www.w3.org/TR/audiobooks) document.
 - [`test_reports`](./test_reports): public report files for the various test suites.
 
 
