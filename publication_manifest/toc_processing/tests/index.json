@@ -1,0 +1,20 @@
+{
+    "date": "2019-12-04",
+    "title": "Tests for the table of contents",
+    "href": "https://www.w3.org/TR/pub-manifest/",
+    "tests": [
+        {
+            "section": "§C.2 - Table of Contents Title",
+            "href": "https://www.w3.org/TR/pub-manifest/#manifest",
+            "tests": [
+                {
+                    "id": "c2.title.01",
+                    "description": "Basic table of contents heading check",
+                    "actions": "Set toc name to 'Test Table of Contents'",
+                    "errors": "none",
+                    "media-type": "text/html"
+                }
+            ]
+        }
+    ]
+}
