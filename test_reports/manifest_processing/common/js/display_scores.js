@@ -125,7 +125,7 @@ function display_implementations(implementations, prefix) {
         description.append(dl);
         const dd = document.createElement('dd');
         let descr = `${impl.$description}`;
-        if (impl.$ref !== undefined) {
+        if (impl.$href !== undefined) {
             descr = `${descr} (<a href="${impl.$href}">Click here for further details</a>.)`;
         }
         dd.innerHTML = `${descr}`;

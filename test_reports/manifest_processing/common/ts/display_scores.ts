@@ -206,7 +206,7 @@ function display_implementations(implementations: Implementation[], prefix: stri
 
         const dd: HTMLElement = document.createElement('dd');
         let descr = `${impl.$description}`;
-        if (impl.$ref !== undefined) {
+        if (impl.$href !== undefined) {
             descr = `${descr} (<a href="${impl.$href}">Click here for further details</a>.)`;
         }
         dd.innerHTML = `${descr}`;
