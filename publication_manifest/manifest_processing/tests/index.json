@@ -1,0 +1,619 @@
+{
+    "date": "2019-11-23",
+    "title": "Tests for the  publication manifest",
+    "href": "https://www.w3.org/TR/pub-manifest/",
+    "tests": [
+        {
+            "section": "§4. Publication Manifest",
+            "href": "https://www.w3.org/TR/pub-manifest/#manifest",
+            "tests": [
+                {
+                    "id": "m4.01",
+                    "description": "Basic, correct manifest, usable to test a local setup",
+                    "actions": "Output the manifest",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.3 Manifest contexts",
+            "href": "https://www.w3.org/TR/pub-manifest/#manifest-context",
+            "tests": [
+                {
+                    "id": "m4.3.01",
+                    "description": "The manifest must have a '@context'",
+                    "actions": "Return empty",
+                    "errors": "Fatal error on missing context",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.3.02",
+                    "description": "The manifest '@context' must contain the schema.org and the publication manifest context references.",
+                    "actions": "Return empty",
+                    "errors": "Fatal error on missing context",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.4 Manifest Language and Direction",
+            "href": "https://www.w3.org/TR/pub-manifest/#manifest-lang-dir",
+            "tests": [
+                {
+                    "id": "m4.4.01",
+                    "description": "The global language value can be set as part of the '@context' array",
+                    "actions": "Language 'en' set for all strings",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.4.02",
+                    "description": "The global language value must be valid BCP47",
+                    "actions": "No effect on output (value ignored)",
+                    "errors": "Validation error on incorrect BCP47 value",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.4.03",
+                    "description": "The global base direction value can be set as part of the '@context' array",
+                    "actions": "Direction ltr set for all strings",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.4.04",
+                    "description": "The global base direction value must 'ltr' or 'rtl'",
+                    "actions": "No effect on output (value ignored)",
+                    "errors": "Validation error on incorrect base direction value",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.4.05",
+                    "description": "If several global language, resp. base direction values are set, the last one wins in both cases",
+                    "actions": "Strings should be set with 'language:en' and 'direction:ltr'",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.5 Publication types",
+            "href": "https://www.w3.org/TR/pub-manifest/#profile-types",
+            "tests": [
+                {
+                    "id": "m4.5.01",
+                    "description": "The 'type' of the manifest should be set; if missing, 'CreativeWork' is added by default",
+                    "actions": "The CreativeWork type should be added",
+                    "errors": "Validation error (no type)",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.5.02",
+                    "description": "The 'type' value can be set to other values",
+                    "actions": "no change on the document",
+                    "errors": "None",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.6 Profile Conformance",
+            "href": "https://www.w3.org/TR/pub-manifest/#profile-conformance",
+            "tests": [
+                {
+                    "id": "m4.6.01",
+                    "description": "There should be a 'conformsTo' value in the manifest; a default is set if missing",
+                    "actions": "Set 'profile' to user agents default",
+                    "errors": "Validation error on missing conformance",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.6.02",
+                    "description": "The user agent has a set of profile references it understands, other values are ignored",
+                    "actions": "Set 'profile' to user agents default",
+                    "errors": "Validation error on no known conformance",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.6.03",
+                    "description": "Non-default conformance value can be set that the user agent understands",
+                    "actions": "Set 'profile' to the audiobooks profile value",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.1 Abridged",
+            "href": "https://www.w3.org/TR/pub-manifest/#abridged",
+            "tests": [
+                {
+                    "id": "m4.7.1.1.01",
+                    "description": "The value of 'abridged' must be a boolean",
+                    "actions": "The value of abridged should be removed from the result",
+                    "errors": "Validation error on abridged",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.2. Accessibility",
+            "href": "https://www.w3.org/TR/pub-manifest/#accessibility",
+            "tests": [
+                {
+                    "id": "m4.7.1.2.01",
+                    "description": "Simple a11y terms can also be set as single literals",
+                    "actions": "All values should be turned into arrays of literals",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.2.02",
+                    "description": "The value of 'accessModeSufficient' has a strict structure per schema.org; illegal values should be removed",
+                    "actions": "The illegal value (visual) should be removed",
+                    "errors": "Validation error on the incorrect data",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.2.03",
+                    "description": "The value of 'accessModeSufficient' has a strict structure per schema.org; illegal values should be removed",
+                    "actions": "Both values being invalid, the key should be removed altogether",
+                    "errors": "Validation error on the incorrect data",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.3 Address",
+            "description": "https://www.w3.org/TR/pub-manifest/#address",
+            "tests": [
+                {
+                    "id": "m4.7.1.3.01",
+                    "description": "All URL values for 'url' can be relative, expanded via base",
+                    "actions": "Value of URL should be absolute",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.3.02",
+                    "description": "All URL values for an 'url' within an array can be relative, expanded via base",
+                    "actions": "Value of all URLs in the array should be absolute",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.3.03",
+                    "description": "The values of the 'url' term must be a valid URL",
+                    "actions": "The invalid URL should be removed",
+                    "errors": "Validation error on the URL",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.4 Canonical Identifier",
+            "href": "https://www.w3.org/TR/pub-manifest/#canonical-identifier",
+            "tests": [
+                {
+                    "id": "m4.7.1.4.01",
+                    "description": "The value of 'id' must be a valid URL",
+                    "actions": "Value of invalid URL should be removed",
+                    "errors": "Validation error on the URL",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.4.02",
+                    "description": "The manifest should contain a value for 'id'",
+                    "actions": "Output unchanged",
+                    "errors": "Validation error on the missing ID",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.5 Creators",
+            "href": "https://www.w3.org/TR/pub-manifest/#creators",
+            "tests": [
+                {
+                    "id": "m4.7.1.5.01",
+                    "description": "Persons can be provided as single strings",
+                    "actions": "Array of names turned into an array of Persons",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.5.02",
+                    "description": "A single person is not required to be in an array",
+                    "actions": "The single term is turned into a one-element Array of Persons",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.5.03",
+                    "description": "An entity should have a name",
+                    "actions": "The entry without a name is removed from the array",
+                    "errors": "validation error on missing name",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.5.04",
+                    "description": "All creators defined in the specification, and only those, should have the same behaviors (copy of m47502)",
+                    "actions": "All the defined creator values should be turned into array; this does not apply to extra terms like 'auteur'",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.6 Duration",
+            "href": "https://www.w3.org/TR/pub-manifest/#duration",
+            "tests": [
+                {
+                    "id": "m4.7.1.6.01",
+                    "description": "Duration should have the right ISO format (incorrect value)",
+                    "actions": "Duration should be removed from output",
+                    "errors": "Validation error on incorrect duration format",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.6.02",
+                    "description": "Duration should have the right ISO format (correct value)",
+                    "actions": "Duration value should be present in the output",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.6.03",
+                    "description": "Duration should have the right ISO format also in a linked resource (incorrect value)",
+                    "actions": "Duration should be removed from output",
+                    "errors": "Validation error on incorrect duration format",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.6.04",
+                    "description": "Duration should have the right ISO format also in a linked resource (correct value)",
+                    "actions": "Duration value should be present in the output",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.7 Last Modification Date and §4.7.1.8 Publication Date",
+            "href": "https://www.w3.org/TR/pub-manifest/#last-modification-date",
+            "tests": [
+                {
+                    "id": "m4.7.1.7.01",
+                    "description": "Both 'datePublished' and 'dateModified' must be in ISO format (incorrect values)",
+                    "actions": "Both 'datePublished' and 'dateModified' are incorrect, and should be removed from output",
+                    "errors": "incorrect publication dates",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.7.02",
+                    "description": "Both 'datePublished' and 'dateModified' must be in ISO format (correct values)",
+                    "actions": "Both 'datePublished' and 'dateModified' are correct, and  should be present in the output",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.9 Publication Language",
+            "href": "https://www.w3.org/TR/pub-manifest/#inLanguage",
+            "tests": [
+                {
+                    "id": "m4.7.1.9.01",
+                    "description": "The value of 'inLanguage' must be valid BCP47",
+                    "actions": "Value of 'inLanguage' must be checked, and removed (as invalid)",
+                    "errors": "validation error on incorrect BCP47 value",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.9.02",
+                    "description": "The value of 'inLanguage' value may be an array, each element a valid BCP47",
+                    "actions": "Incorrect values must be removed from the array",
+                    "errors": "validation error on incorrect BCP47 value",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.10 Reading Progression Direction",
+            "href": "https://www.w3.org/TR/pub-manifest/#reading-progression-direction",
+            "tests": [
+                {
+                    "id": "m4.7.1.10.01",
+                    "description": "The value of 'readingProgression' value must ltr or rtl",
+                    "actions": "Value of readingProgression must be checked, and set to the default 'ltr'",
+                    "errors": "validation error on incorrect direction",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.1.11 Title",
+            "href": "https://www.w3.org/TR/pub-manifest/#pub-title",
+            "tests": [
+                {
+                    "id": "m4.7.1.11.01",
+                    "description": "The title (ie, 'name') can be set as a simple string, as an abbreviation for localizable texts",
+                    "actions": "Convert the simple string into an array of Localizable string",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.11.02",
+                    "description": "The title (ie, 'name') is a natural language text, the global language and direction must be set",
+                    "actions": "Convert the simple string into a text labeled as English, and direction ltr",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.1.11.03",
+                    "description": "The title (ie, 'name') is an array of natural language texts, each can have its language and direction set individually",
+                    "actions": "Convert the two items into arabic and direction rtl for the first, and english and ltr for the second",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.2.1 Default Reading Order",
+            "href": "https://www.w3.org/TR/pub-manifest/#default-reading-order",
+            "tests": [
+                {
+                    "id": "m4.7.2.1.01",
+                    "description": "The 'readingOrder' can be expressed as a single relative URL",
+                    "actions": "The input is converted into an array of a single object, with the 'url' set to the absolute URL",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.1.02",
+                    "description": "All URL-s must be valid; invalid values are removed",
+                    "actions": "The second entry in 'readingOrder' is removed from the final list",
+                    "errors": "Validation error on invalid URL, and a validation error on removing the corresponding Linked Resource",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.1.03",
+                    "description": "A missing 'readingOrder' is replaced by a default",
+                    "actions": "A 'readingOrder' is added with a single link set to the HTML Nodes Document.URL. If none provided, validation error",
+                    "errors": "Validation error on invalid URL, and a validation error on removing the corresponding Linked Resource",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.1.04",
+                    "description": "Duplicate URLs generate warning but stay in the list",
+                    "actions": "The output does not change",
+                    "errors": "Validation error on repeated URLs",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.2.2 Resource List",
+            "href": "https://www.w3.org/TR/pub-manifest/#resource-list",
+            "tests": [
+                {
+                    "id": "m4.7.2.2.01",
+                    "description": "The 'resources' can be expressed as a single relative URL",
+                    "actions": "The input is converted into an array of a single object, with the 'url' set to the absolute URL",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.2.02",
+                    "description": "All URL-s in 'resources' must be valid; invalid values are removed",
+                    "actions": "The second entry in 'resources' is removed from the final list",
+                    "errors": "Validation error on invalid URL",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.2.03",
+                    "description": "Duplicate URL-s removed from 'resources'",
+                    "actions": "The third entry in 'resources' is removed from the final list",
+                    "errors": "Validation error on repeated resources",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.2.3 Links",
+            "href": "https://www.w3.org/TR/pub-manifest/#links",
+            "tests": [
+                {
+                    "id": "m4.7.2.3.01",
+                    "description": "The 'links' can be expressed as a single relative URL",
+                    "actions": "The input is converted into an array of a single object, with the 'url' set to the absolute URL",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.3.02",
+                    "description": "All URL-s in 'links' must be valid; invalid values are removed",
+                    "actions": "The second entry in 'links' is removed from the final list",
+                    "errors": "Validation error on invalid URL",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.3.03",
+                    "description": "Entries in 'links' must not appear in 'readingOrder'",
+                    "actions": "The 'chapter1.html' entry is removed from  'links'",
+                    "errors": "Validation error on a link appearing in bounds",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.3.04",
+                    "description": "All URL-s (ignoring fragment id-s) in 'links' must be disjoint from the ones in 'readingOrder' or 'resources'.",
+                    "actions": "The chapter1.html, link1.html, and link3.html are removed from  links",
+                    "errors": "Validation error on a link appearing in bounds",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.3.05",
+                    "description": "Cover page, toc reference, or pagelist reference should not appear in 'links'",
+                    "actions": "The links2.html, links4.html, and links6.html entries should be removed from the final links; others should be listed.",
+                    "errors": "Validation error on all three faulty links.",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.2.3.06",
+                    "description": "Each entry in 'links' should have its 'rel' value set",
+                    "actions": "Output should be unchanged",
+                    "errors": "Validation error on missing rel.",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.7.3.2 Additional Manifest Properties",
+            "href": "https://www.w3.org/TR/pub-manifest/#extensibility-manifest-properties",
+            "tests": [
+                {
+                    "id": "m4.7.3.2.01",
+                    "description": "Extra term values with, possibly, extra namespace declaration must be accepted and added to the output",
+                    "actions": "The manifest should leave the extra values in the output",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.7.3.2.02",
+                    "description": "Extra term values in entities and in linked resources must be accepted and added to the output",
+                    "actions": "The manifest should leave the extra values in the output",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.8.1.1 Cover",
+            "href": "https://www.w3.org/TR/pub-manifest/#cover",
+            "tests": [
+                {
+                    "id": "m4.8.1.1.01",
+                    "description": "There should not be a repeated definition of cover",
+                    "actions": "The second occurrence of cover should be flagged",
+                    "errors": "Validation error on cover",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.8.1.1.02",
+                    "description": "A cover referring to an image should have a 'name'",
+                    "actions": "Validation error generation",
+                    "errors": "Validation error on missing name",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m4.8.1.1.03",
+                    "description": "A cover referring to a non-image without a 'name' is fine",
+                    "actions": "No change on the output",
+                    "errors": "None",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.8.1.2 Page List",
+            "href": "https://www.w3.org/TR/pub-manifest/#page-list",
+            "tests": [
+                {
+                    "id": "m4.8.1.2.01",
+                    "description": "There should be only one page list",
+                    "actions": "The second occurrence of page list should be flagged",
+                    "errors": "Validation error on page list",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§4.8.1.3 Table of contents",
+            "href": "https://www.w3.org/TR/pub-manifest/#pub-table-of-contents",
+            "tests": [
+                {
+                    "id": "m4.8.1.3.01",
+                    "description": "There should be only one TOC reference",
+                    "actions": "The second occurrence of TOC should be flagged",
+                    "errors": "Validation error on TOC",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§5 Publication resources",
+            "href": "https://www.w3.org/TR/pub-manifest/#publication-resources",
+            "tests": [
+                {
+                    "id": "m5.01",
+                    "description": "Calculation of bounds should include only the URL-s without fragment identifiers",
+                    "actions": "The 'uniqueResources' array contains URL-s without fragments",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                },
+                {
+                    "id": "m5.02",
+                    "description": "Each value on bounds should be different",
+                    "actions": "The 'uniqueResources' array contains unique URL-s only",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
+                }
+            ]
+        },
+        {
+            "section": "§6 Manifest Discovery",
+            "href": "https://www.w3.org/TR/pub-manifest/#manifest-discovery",
+            "tests": [
+                {
+                    "id": "m6.01",
+                    "format": "html",
+                    "description": "The manifest may be linked via a 'link' element in the primary entry page",
+                    "actions": "The separate manifest file (link_6.01.jsonld) should be processed and generated",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.02",
+                    "format": "html",
+                    "description": "The manifest may embedded, via a 'script' element, into the primary entry page",
+                    "actions": "The embedded manifest should be processed and generated",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.03",
+                    "format": "html",
+                    "description": "If the 'name' entry is not present, the 'title' element of the primary entry page may be used instead",
+                    "actions": "The embedded manifest should be processed and generated with an additional name",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.04",
+                    "format": "html",
+                    "description": "When reusing the title for 'name', the language and direction set in HTML is valid",
+                    "actions": "The embedded manifest should be processed and generated with an additional name",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.05",
+                    "format": "html",
+                    "description": "If the 'readingOrder' is empty, the URL of the Primary Entry Page is used as a default",
+                    "actions": "The embedded manifest should be processed and generated with the reading order set to the HTML's URL. The value should also be present in the 'uniqueResources' array.",
+                    "errors": "none",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.06",
+                    "format": "html",
+                    "description": "There should be either a 'name' or a usable 'title' in the Primary Entry Page.",
+                    "actions": "An application-dependent name should be added",
+                    "errors": "Validation error on a missing default title",
+                    "media-type": "text/html"
+                }
+            ]
+        }
+    ]
+}

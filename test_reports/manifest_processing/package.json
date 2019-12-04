@@ -1,11 +1,11 @@
 {
-  "name": "test_report",
+  "name": "Publication_test_reports",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "build": "tsc"
   },
-  "author": "Ivan",
+  "author": "Ivan Herman",
   "license": "W3C",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.8.0",

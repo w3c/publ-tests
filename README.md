@@ -3,9 +3,12 @@
 
 The repository contains different test suites that are used for various projects in the Publishing@W3C activity.
 
-## Test Suites
+## Content
 
-- **[API Tests](./APITests):** Tests for [Manifest Processing](https://www.w3.org/TR/pub-manifest/#manifest-processing) algorithm of the [Publication Manifest](https://www.w3.org/TR/pub-manifest) document, as well as the [extension thereof](https://www.w3.org/TR/audiobooks/#audio-manifest-processing) defined in the [Audiobooks](https://www.w3.org/TR/audiobooks) document.
+- `publication_manifest`: tests related to the [Publication Manifest](https://www.w3.org/TR/pub-manifest) document. 
+- `audiobooks`: tests related to the [Audiobooks](https://www.w3.org/TR/audiobooks) document. 
+- `test_reports`: public report files for the various document tests. 
+
 
 ---
 
