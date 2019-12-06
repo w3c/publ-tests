@@ -16,15 +16,29 @@
 				},
 				{
 					"id": "s4.8.1.3.02",
-					"description": "No resource in manifest identified as table of contents - obtain from referencing page",
+					"description": "No resource in manifest identified as table of contents - obtain from primary entry",
 					"actions": "Processed table of contents containing heading and a single link to chapter 1",
 					"errors": "none",
 					"media-type": "text/html"
 				},
 				{
 					"id": "s4.8.1.3.03",
-					"description": "No table of contents in manifest or on referencing page",
+					"description": "No table of contents in manifest or on primary entry page",
 					"actions": "Table of contents is null",
+					"errors": "Warning that primary entry page should contain the table of contents",
+					"media-type": "text/html"
+				},
+				{
+					"id": "s4.8.1.3.04",
+					"description": "Multiple table of contents - No reference",
+					"actions": "First table of contents with Chapter 1 link processed",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "s4.8.1.3.05",
+					"description": "Multiple table of contents - Specific reference",
+					"actions": "Second table of contents with Chapter 1 link processed",
 					"errors": "none",
 					"media-type": "text/html"
 				}
@@ -65,7 +79,7 @@
 			]
 		},
 		{
-			"section": "§C.2 - Table of Contents List",
+			"section": "§C.2 - List of Links",
 			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
 			"tests": [
 				{
@@ -81,8 +95,45 @@
 					"actions": "TOC with a single link to chapter 1",
 					"errors": "none",
 					"media-type": "text/html"
+				},
+				{
+					"id": "c2.list.03",
+					"description": "Nested Table of Contents",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
 				}
 			]
+		},
+		{
+			"section": "§C.2 - Branches",
+			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
+			"tests": []
+		},
+		{
+			"section": "§C.2 - Skipped Elements",
+			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
+			"tests": [
+				{
+					"id": "c2.skipped.01",
+					"description": "Table of Contents in Skipped Element",
+					"actions": "TOC is null",
+					"errors": "Warning that primary entry page should contain the table of contents",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.skipped.02",
+					"description": "Table of Contents after Skipped TOC",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				}
+			]
+		},
+		{
+			"section": "§C.2 - Ignored Elements",
+			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
+			"tests": []
 		}
 	]
 }

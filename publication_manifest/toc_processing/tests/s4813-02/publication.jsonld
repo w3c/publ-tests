@@ -7,7 +7,7 @@
   "type": "Audiobook",
   "id": "https://librivox.org/flatland-a-romance-of-many-dimensions-by-edwin-abbott-abbott/",
   "url": "https://w3c.github.io/pub-manifest/experiments/audiobook/",
-  "name": "Flatland: A Romance of Many Dimensions",
+  "name": "No resource in manifest identified as table of contents - obtain from primary entry",
   "author": "Edwin Abbott Abbott",
   "readBy": "Ruth Golding",
   "inLanguage": "en",
@@ -31,10 +31,6 @@
       "url": "http://ia800704.us.archive.org/9/items/LibrivoxCdCoverArt12/Flatland_1109.jpg",
       "encodingFormat": "image/jpeg",
       "name": "Cover page with title and author"
-    },{
-      "rel": "contents",
-      "url": "s4813-01/toc.html",
-      "encodingFormat": "text/html"
     }
   ],
   "readingOrder": [

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Table of Contents with Unordered List</title>
+		<title>Nested Table of Contents</title>
 		<link rel="publication" href="#manifest">
 		<script id="manifest">
 {
@@ -52,11 +52,16 @@
 	</head>
 	<body>
 		<nav role="doc-toc">
-			<ul>
-				<li>
-					<a href="c01.html">Chapter 1</a>
-				</li>
-			</ul>
+			<h2>Table of Contents</h2>
+			<div>
+				<div>
+					<ol>
+						<li>
+							<a href="c01.html">Chapter 1</a>
+						</li>
+					</ol>
+				</div>
+			</div>
 		</nav>
 	</body>
 </html>

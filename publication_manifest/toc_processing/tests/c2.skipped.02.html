@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Table of Contents with Unordered List</title>
+		<title>Table of Contents in Hidden Element</title>
 		<link rel="publication" href="#manifest">
 		<script id="manifest">
 {
@@ -51,6 +51,13 @@
 		</script>
 	</head>
 	<body>
+		<nav role="doc-toc" hidden="hidden">
+			<ul>
+				<li>
+					<a href="xxxx.html">Not the right toc</a>
+				</li>
+			</ul>
+		</nav>
 		<nav role="doc-toc">
 			<ul>
 				<li>
