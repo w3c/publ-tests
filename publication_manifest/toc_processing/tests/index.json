@@ -1,68 +1,88 @@
 {
-    "date": "2019-12-04",
-    "title": "Tests for the table of contents",
-    "href": "https://www.w3.org/TR/pub-manifest/",
-    "tests": [
-    	{
-    		"section" : "§4.8.1.3 - Discovering a TOC",
-    		"href"    : "https://www.w3.org/TR/pub-manifest/#pub-table-of-contents",
-    		"tests"   : [
-    			{
-                    "id": "s4.8.1.3.01",
-                    "description": "Resource in manifest identified as toc",
-                    "actions": "Processed table of contents containing heading and a single link to chapter 1",
-                    "errors": "none",
-                    "media-type": "text/html"
-    			},
-    			{
-                    "id": "s4.8.1.3.02",
-                    "description": "No resource in manifest identified as table of contents - obtain from referencing page",
-                    "actions": "Processed table of contents containing heading and a single link to chapter 1",
-                    "errors": "none",
-                    "media-type": "text/html"
-    			},
-    			{
-                    "id": "s4.8.1.3.03",
-                    "description": "No table of contents in manifest or on referencing page",
-                    "actions": "Table of contents is null",
-                    "errors": "none",
-                    "media-type": "text/html"
-    			}
-    		]
-    	},
-        {
-            "section" : "§C.2 - Table of Contents Title",
-            "href"    : "https://www.w3.org/TR/pub-manifest/#manifest",
-            "tests"   : [
-                {
-                    "id": "c2.title.01",
-                    "description": "Basic table of contents heading check",
-                    "actions": "Set toc name to 'Test Table of Contents'",
-                    "errors": "none",
-                    "media-type": "application/json+ld"
-                },
-                {
-                    "id": "c2.title.02",
-                    "description": "Heading nested inside other elements",
-                    "actions": "Set toc name to 'Test Table of Contents'",
-                    "errors": "none",
-                    "media-type": "application/json+ld"
-                },
-                {
-                    "id": "c2.title.03",
-                    "description": "No heading for table of contents",
-                    "actions": "name field for the table of contents is null, or is a user agent generated name",
-                    "errors": "none",
-                    "media-type": "application/json+ld"
-                },
-                {
-                    "id": "c2.title.04",
-                    "description": "Invalid heading after toc list",
-                    "actions": "name field for the table of contents is null, or is a user agent generated name",
-                    "errors": "none",
-                    "media-type": "application/json+ld"
-                }
-            ]
-        }
-    ]
+	"date": "2019-12-04",
+	"title": "Tests for the table of contents",
+	"href": "https://www.w3.org/TR/pub-manifest/",
+	"tests": [
+		{
+			"section": "§4.8.1.3 - Discovering a TOC",
+			"href": "https://www.w3.org/TR/pub-manifest/#pub-table-of-contents",
+			"tests": [
+				{
+					"id": "s4.8.1.3.01",
+					"description": "Resource in manifest identified as toc",
+					"actions": "Processed table of contents containing heading and a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "s4.8.1.3.02",
+					"description": "No resource in manifest identified as table of contents - obtain from referencing page",
+					"actions": "Processed table of contents containing heading and a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "s4.8.1.3.03",
+					"description": "No table of contents in manifest or on referencing page",
+					"actions": "Table of contents is null",
+					"errors": "none",
+					"media-type": "text/html"
+				}
+			]
+		},
+		{
+			"section": "§C.2 - Table of Contents Title",
+			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
+			"tests": [
+				{
+					"id": "c2.title.01",
+					"description": "Basic table of contents heading check",
+					"actions": "Set toc name to 'Test Table of Contents'",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.title.02",
+					"description": "Heading nested inside other elements",
+					"actions": "Set toc name to 'Test Table of Contents'",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.title.03",
+					"description": "No heading for table of contents",
+					"actions": "name field for the table of contents is null, or is a user agent generated name",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.title.04",
+					"description": "Invalid heading after toc list",
+					"actions": "name field for the table of contents is null, or is a user agent generated name",
+					"errors": "none",
+					"media-type": "text/html"
+				}
+			]
+		},
+		{
+			"section": "§C.2 - Table of Contents List",
+			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
+			"tests": [
+				{
+					"id": "c2.list.01",
+					"description": "Table of Contents with Ordered List",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.list.02",
+					"description": "Table of Contents with Unordered List",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				}
+			]
+		}
+	]
 }

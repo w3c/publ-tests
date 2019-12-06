@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Heading nested inside other elements</title>
+		<link rel="publication" href="#manifest">
+		<script id="manifest">
 {
   "@context": [
       "https://schema.org",
@@ -7,7 +13,7 @@
   "type": "Audiobook",
   "id": "https://librivox.org/flatland-a-romance-of-many-dimensions-by-edwin-abbott-abbott/",
   "url": "https://w3c.github.io/pub-manifest/experiments/audiobook/",
-  "name": "TOC Test C2.Title.04",
+  "name": "TOC Test C2.Title.02",
   "author": "Edwin Abbott Abbott",
   "readBy": "Ruth Golding",
   "inLanguage": "en",
@@ -31,10 +37,6 @@
       "url": "http://ia800704.us.archive.org/9/items/LibrivoxCdCoverArt12/Flatland_1109.jpg",
       "encodingFormat": "image/jpeg",
       "name": "Cover page with title and author"
-    },{
-      "rel": "contents",
-      "url": "c2title-04/toc.html",
-      "encodingFormat": "text/html"
     }
   ],
   "readingOrder": [
@@ -46,3 +48,20 @@
     }
   ]
 }
+		</script>
+	</head>
+	<body>
+		<nav role="doc-toc">
+			<header>
+				<div>
+					<h2>Test Table of Contents</h2>
+				</div>
+			</header>
+			<ol>
+				<li>
+					<a href="s01.html">Section 1</a>
+				</li>
+			</ol>
+		</nav>
+	</body>
+</html>

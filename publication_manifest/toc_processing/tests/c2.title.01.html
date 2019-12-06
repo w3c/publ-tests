@@ -1,4 +1,9 @@
-{
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Basic table of contents heading check</title>
+		<link rel="publication" href="#manifest">
+		<script id="manifest">{
   "@context": [
       "https://schema.org",
       "https://www.w3.org/ns/pub-context"
@@ -7,7 +12,7 @@
   "type": "Audiobook",
   "id": "https://librivox.org/flatland-a-romance-of-many-dimensions-by-edwin-abbott-abbott/",
   "url": "https://w3c.github.io/pub-manifest/experiments/audiobook/",
-  "name": "TOC Test C2.Title.02",
+  "name": "TOC Test C2.Title.01",
   "author": "Edwin Abbott Abbott",
   "readBy": "Ruth Golding",
   "inLanguage": "en",
@@ -31,10 +36,6 @@
       "url": "http://ia800704.us.archive.org/9/items/LibrivoxCdCoverArt12/Flatland_1109.jpg",
       "encodingFormat": "image/jpeg",
       "name": "Cover page with title and author"
-    },{
-      "rel": "contents",
-      "url": "c2title-02/toc.html",
-      "encodingFormat": "text/html"
     }
   ],
   "readingOrder": [
@@ -45,4 +46,16 @@
       "name": "Part 1, Sections 1 - 3"
     }
   ]
-}
+}</script>
+	</head>
+	<body>
+		<nav role="doc-toc">
+			<h2>Test Table of Contents</h2>
+			<ol>
+				<li>
+					<a href="s01.html">Section 1</a>
+				</li>
+			</ol>
+		</nav>
+	</body>
+</html>
