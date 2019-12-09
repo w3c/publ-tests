@@ -1,0 +1,5 @@
+{
+    "$name"        : "Test",
+    "$description" : "This is just a dummy to test the reporting mechanism.",
+    "c2.title.01"      : true
+}
