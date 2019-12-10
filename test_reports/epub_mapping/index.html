@@ -82,7 +82,14 @@
 			a:hover {
 				text-decoration: underline;
 			}
+			
+			pre {
+				background-color: rgb(250,250,250);
+				height: 15rem;
+				overflow: auto;
+			}
 		</style>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
@@ -927,7 +934,64 @@
 		<section id="examples">
 			<h2>Examples</h2>
 			
-			<p>To be added...</p>
+			<p>The following examples show EPUB 3 package documents that have been transformed into the publication
+				manifest format:</p>
+			
+			<ul>
+				<li>
+					<p><a href="#comp" role="button" onclick="loadExample('ebooks4all')">Ebooks for All</a></p>
+				</li>
+				<li>
+					<p><a href="#comp" role="button" onclick="loadExample('pinocchio')">Pinocchio</a></p>
+				</li>
+			</ul>
+			
+			<div id="comp">
+				<pre id="epub"></pre>
+				<pre id="pub-manifest"></pre>
+			</div>
 		</section>
+		<script>
+			function loadExample(exid) {
+				try {
+					loadFile('epub', exid+'.txt');
+					loadFile('pub-manifest', exid+'.jsonld');
+				}
+				catch (e) {
+					console.error('Error loading example files:' + e.toString());
+				}
+			}
+			
+			function loadFile(id, fileName) {
+				$.ajax({
+					url:       'examples/'+fileName,
+					cache:     false,
+					dataType:  id == 'epub' ? 'xml' : 'json',
+					success: function(data) {
+						document.getElementById(id).innerHTML = (id == 'epub') ? prettifyXml(data) : JSON.stringify(data,null,3);
+					},
+					error: function(xhr, status, error) {
+						console.error('File ' + fileName + ' could not be loaded. ' + error);
+					}
+				});
+			}
+			
+			var prettifyXml = function(xmlDoc) {
+				var xsltDoc = new DOMParser().parseFromString([
+					'<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">',
+					'  <xsl:output omit-xml-declaration="yes" indent="yes"/>',
+					'  <xsl:template match="node()|@*">',
+					'    <xsl:copy><xsl:apply-templates select="node()|@*"/></xsl:copy>',
+					'  </xsl:template>',
+					'</xsl:stylesheet>',
+				].join('\n'), 'application/xml');
+				
+				var xsltProcessor = new XSLTProcessor();    
+					xsltProcessor.importStylesheet(xsltDoc);
+				var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+				var resultXml = new XMLSerializer().serializeToString(resultDoc);
+				return resultXml.replace(/</g,'&lt;');
+			};
+		</script>
 	</body>
 </html>
