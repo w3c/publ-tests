@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Publication Manifest to EPUB Mapping Report</title>
+		<link href='https://www.w3.org/StyleSheets/TR/base' rel='stylesheet' />
+		<link href='common/css/style.css' rel='stylesheet' />
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script src='../common/js/doc-toc.js'></script>
+		<script>
+			window.addEventListener('load', handleDocToc);
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<p>
+				<a href='http://www.w3.org/'>
+					<img alt='W3C' height='48' src='https://www.w3.org/Icons/w3c_home' width='72' />
+				</a>
+			</p>
+			<h1>Publication Manifest to EPUB Mapping Report</h1>
+
+			<p>This report documents how the features of the Publication Manifest format map to the EPUB 3 Package
+				Document to demonstrate the real-world applicability of the manifest structures and metadata. Where
+				features of EPUB are not supported, or not directly mentioned in the Publication Manifest, descriptions
+				of how the features can be implemented, or why they are not needed, are provided.</p>
+
+			<p>It does not include mappings for legacy or deprecated features of EPUB 3.</p>
+			<nav role='doc-toc' data-options='dynamic max_depth=3 use_sections'></nav>
+		</header>
+
+		<main>
+			<section id="structure">
+				<h2>Structure</h2>
+
+				<table class=zebra>
+					<thead>
+						<tr>
+							<th>Publication Manifest</th>
+							<th>EPUB 3 Package Document</th>
+							<th>Explanation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<a href="https://w3c.github.io/pub-manifest/#default-reading-order">readingOrder</a>
+							</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-spine-elem">spine</a>
+							</td>
+							<td>Default progression through the content. EPUB uses references to the manifest, while the
+								Package Document uses a list of resources.</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://w3c.github.io/pub-manifest/#resource-list">resources</a>
+							</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-manifest-elem">manifest</a>
+							</td>
+							<td>Identifies the resources of the publication. The EPUB manifest is the complete set of
+								resources, while Pub Manifest uses a union of readingOrder and resources.</td>
+						</tr>
+						<tr>
+							<td>n/a</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#elemdef-opf-metadata">metadata</a>
+							</td>
+							<td>The publication manifest does not use a special grouping for metadata &#8212; all terms
+								other
+								than the readingOrder and resources are the equivalent of the EPUB metadata.</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://w3c.github.io/pub-manifest/#links">links</a>
+							</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-link-elem">metadata/link</a>
+							</td>
+							<td>Linked resources. EPUB does not separate linked resources from the other publication
+								metadata.</td>
+						</tr>
+						<tr>
+							<td>(none)</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-collection-elem">collection</a>
+							</td>
+							<td>Collections are like mini-package documents within the package document. Accommodating
+								them
+								would require a manifest-like set of objects, presumably under a collections property.
+								There
+								seems to be limited to no uptake of collections in EPUB, however, despite a few
+								specifications that use them (e.g., previews, indexes and dictionaries).</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section id="pub-info">
+				<h2>Publication Information</h2>
+
+				<section id="lang-dir">
+					<h3>Language and Direction</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#manifest-lang-dir-global">@context/language</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-package-elem">package[@xml:lang]</a>
+								</td>
+								<td>Global manifest/package language declaration.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#manifest-lang-dir-global">@context/direction</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-package-elem">package[@dir]</a>
+								</td>
+								<td>Global manifest/package direction declaration.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#manifest-lang-dir-local">term/language</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-xml-lang">metadata/meta[@xml:lang]</a>
+								</td>
+								<td>Local language overrides.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#manifest-lang-dir-local">term/direction</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-dir">metadata/meta[@dir]</a>
+								</td>
+								<td>Local direction overrides.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section id="identifiers">
+					<h3>Identifiers</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#canonical-identifier">id</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-package-unique-identifier">package[@unique-identifier]</a>
+									- <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dcidentifier">dc:identifier</a>
+								</td>
+								<td>Unique identifier for the publication.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#last-modification-date">dateModified</a>
+									+
+									<a href="https://w3c.github.io/pub-manifest/#canonical-identifier">id</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-metadata-elem-identifiers-pid">release
+										identifier</a>
+								</td>
+								<td>The release identifier technically doesn't exist as a property of the EPUB package
+									document, but is a combination of the unique identifier and last modified date. A
+									similar identifier can be constructed for a publication manifest if the
+									corresponding
+									properties are required by a profile.</td>
+							</tr>
+							<tr>
+								<td>n/a</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-package-version">package/@version</a>
+								</td>
+								<td>The version number is static across major versions of EPUB so it isn't necessary to
+									replicate or store in the manifest.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section id="conformance">
+					<h3>Conformance</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#publication-types">type</a>
+								</td>
+								<td>
+									<code>meta[@property=rdf:type]</code>
+								</td>
+								<td>The type of publication. EPUB does not have an equivalent in the specification, but
+									can
+									be expressed as an <code>rdf:type</code> property.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#profile-conformance">conformsTo</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dctype">dc:type</a>
+								</td>
+								<td>The profile the publication conforms to. EPUB uses reserved keywords instead of URLs
+									for
+									profiles, so these properties are not perfectly compatible.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+
+			<section id="resources">
+				<h2>Resources</h2>
+
+				<section id="declarations">
+					<h3>Declarations</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-type">LinkedResource/type</a>
+								</td>
+								<td>(none)</td>
+								<td>This is schema.org-specific metadata and is not (cannot) be represented in EPUB.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-url">LinkedResource/url</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-href">item[@href]</a>
+									and <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-href">link[@href]</a>
+								</td>
+								<td>Location of the resource. No differences.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-encodingFormat">LinkedResource/encodingFormat</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-item-media-type">item[@media-type]</a>
+									and <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-link-media-type">link[@media-type]</a>
+								</td>
+								<td>Media type of the resource. No differences.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-name">LinkedResource/name</a>
+								</td>
+								<td>(none)</td>
+								<td>The ability to provide an accessible name for resources is lacking in EPUB.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-description">LinkedResource/description</a>
+								</td>
+								<td>(none)</td>
+								<td>The ability to provide an accessible description of resources is lacking in EPUB.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-rel">LinkedResource/rel</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-properties">item[@properties]</a>,
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-properties">link[@properties]</a>
+									and <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-link-rel">link[@rel]</a>
+								</td>
+								<td>The properties attribute is used in EPUB to identify characteristics of a resource
+									but it is
+									not an exact fit with link relations. The link element in EPUB includes a rel
+									attribute,
+									which is more directly equivalent, but link cannot be used for publication
+									resources.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#linkedresource-integrity">LinkedResource/integrity</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-ocf.html#sec-container-metainf-signatures.xml">META-INF/signatures.xml</a>
+								</td>
+								<td>Signing of resources is done in the signatures.xml file in EPUB, not in the package
+									document.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#value-linked-resource">LinkedResource/duration</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-mediaoverlays.html#sec-package-metadata">meta[@property=
+										media:duration][@refines=idref]</a> -&gt; SMIL</td>
+								<td>Duration of a resource. EPUB only allows durations to be associated with SMIL files.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#value-linked-resource">LinkedResource/alternate</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-item-fallback">item[@fallback]</a>
+								</td>
+								<td>An alternate format representation of a resource.</td>
+							</tr>
+							<tr>
+								<td>&#8212;</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-item-media-overlay">item[@media-overlay]</a>
+								</td>
+								<td>How media synchronization compares to EPUB cannot be determined until the
+									Synchronized Media
+									document is completed.</td>
+							</tr>
+							<tr>
+								<td>n/a</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-id">item[@id]</a>
+									and <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-id">link[@id]</a>
+								</td>
+								<td>Resources in the publication manifest are not referenced by identifier, so an
+									identifier
+									attribute is not included. The manifest could be extended for compatibility
+									purposes, if
+									needed.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section id="#importance">
+					<h3>Importance</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>n/a</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-itemref-linear">Linear
+										Content</a>
+								</td>
+								<td>The publication manifest does not require non-linear content in the reading order,
+									so does
+									not distinguish it.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section id="relations">
+					<h3>Relations</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility-report">LinkedResource/rel=
+										accessibility-report</a>
+								</td>
+								<td>
+									<a
+										href="http://www.idpf.org/epub/a11y/#sec-conf-reporting">link[@rel=a11y:certifierReport]</a>
+								</td>
+								<td>Accessibility report for the publication. EPUB use is defined in the Accessibility
+									specification.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#pub-table-of-contents">LinkedResource/rel=
+										contents</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-nav">item[@properties=nav]</a>
+								</td>
+								<td>Identifies the document containing the table of contents. EPUB requires all
+									navigation aids
+									in the navigation document, so does not uniquely identify the resources within it.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#cover">LinkedResource/rel= cover</a>
+								</td>
+								<td>
+									<a href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-cover-image">item[@properties=
+										cover-image]</a>
+								</td>
+								<td>EPUB only identifies cover images. Pub Manifest allows any resource to be identified
+									as the
+									cover.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#page-list">LinkedResource/rel=
+										pageList</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-nav">item[@properties=nav]</a>
+								</td>
+								<td>Identifies the document containing the page list. EPUB requires all navigation aids
+									in the
+									navigation document, so does not uniquely identify the resources within it.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#preview">LinkedResource/rel=
+										preview</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/previews/#sec-2.4">dc:type=preview</a>
+								</td>
+								<td>A preview for the publication. EPUB use is defined in the Previews specification.
+									EPUB
+									defines entire publications as previews and also embeds previews using collections.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#privacy-policy">LinkedResource/rel=
+										privacy-policy</a>
+								</td>
+								<td>
+									<code>link[@rel=privacy-policy]</code>
+								</td>
+								<td>Privacy policy for the publication. EPUB does not have an equivalent in the
+									specification,
+									but could be expressed using a <code>link</code> once registered.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+
+			<section id="metadata">
+				<h2>Metadata</h2>
+
+				<section id="general-metadata">
+					<h3>General Metadata</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#abridged">abridged</a>
+								</td>
+								<td>
+									<code>meta[@property=schema:abridged]</code>
+								</td>
+								<td>Whether the publication is abridged. EPUB does not have an equivalent in the
+									specification, but can be expressed as <code>schema:abridged</code> property.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#creators">creators (artist, author,
+										etc.)</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dccreator">dc:creator</a>,
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dccontributor">dc:contributor</a>
+									+ <a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-role">meta[@role]</a>
+								</td>
+								<td>Creators of the publication. EPUB "refines" the DC elements to add roles.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#publication-date">datePublished</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dcdate">dc:date</a>
+								</td>
+								<td>Date the publication was published.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#last-modification-date">dateModified</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#last-modified-date">dcterms:modified</a>
+								</td>
+								<td>Last modification date of the publication.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#duration">duration</a>
+								</td>
+								<td>
+									<a href="https://www.w3.org/publishing/epub3/epub-mediaoverlays.html#sec-duration">meta[@property=
+										media:duration]</a>
+								</td>
+								<td>Total duration of the publication.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#language-and-dir">inLanguage</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dclanguage">dc:language</a>
+								</td>
+								<td>Language of the publication.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#pub-title">name</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dctitle">dc:title</a>
+								</td>
+								<td>Title of the publication.</td>
+							</tr>
+							<tr>
+								<td>
+									<a
+										href="https://w3c.github.io/pub-manifest/#reading-progression-direction">readingProgression</a>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-spine-page-progression-direction">spine[@page-progression-direction]</a>
+								</td>
+								<td>The content flow direction. EPUB's use is more specifically tied to the expected
+									rendering (e.g., page loading for fixed layouts).</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#address">url</a>
+								</td>
+								<td>
+									<code>meta[@property=schema:url]</code>
+								</td>
+								<td>Address of the publication. EPUB does not have an equivalent in the specification,
+									but
+									can be expressed as <code>schema:url</code> property.</td>
+							</tr>
+							<tr>
+								<td>
+									<code>dc:*</code>
+								</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-opf-dcmes-optional-def">Dublin
+										Core Optional Elements</a>
+								</td>
+								<td>
+									<p>The following elements are not explicitly defined in the Publication Manifest
+										specification: coverage, description, subject, format, relation, rights, source
+										and
+										subject.</p>
+									<p>All of these can be included in a manifest, however, as the dc prefix is part of
+										the
+										initial context.</p>
+								</td>
+							</tr>
+							<tr>
+								<td>n/a</td>
+								<td>
+									<a
+										href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-scheme">meta[@scheme]</a>
+								</td>
+								<td>The scheme attribute was created for EPUB to identify where code values (e.g.,
+									subjects,
+									creators) are defined. Whether and how this would be represented in a publication
+									manifest needs investigation.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section id="meta-assoc">
+					<h3>Metadata Association</h3>
+
+					<p>EPUB 3 uses <a
+							href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-refines">meta[@refines]</a>
+						and <a
+							href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-refines">link[@refines]</a>
+						to tie together multiple related metadata statements, where the <code>refines</code> attribute
+						references the ID of another element in the package document. This mechanism was introduced
+						because
+						it was not possible to nest metadata elements and remains backwards compatible with EPUB 2. The
+						attribute is unnecessary in a publication manifest as metadata is not forced to be flattened. It
+						would be possible to combine/flatten structures during translation. |</p>
+				</section>
+
+				<section id="rendition-metadata">
+					<h3>Rendition Metadata</h3>
+
+					<p>The publication manifest specification can support EPUB's <a
+							href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-package-metadata-fxl">fixed
+							layout metadata</a>, as the properties are already in a specially-prefixed vocabulary, but
+						no
+						use case exists yet for them.</p>
+
+					<p>The same is true for the <a
+							href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-package-metadata-general">general
+							properties</a> defined in that vocabulary.</p>
+				</section>
+
+				<section id="a11y-metadata">
+					<h3>Accessibility Metadata</h3>
+
+					<table class=zebra>
+						<thead>
+							<tr>
+								<th>Publication Manifest</th>
+								<th>EPUB 3 Package Document</th>
+								<th>Explanation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility">accessibilityFeature</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessibilityFeature">meta[@property=
+										schema:accessibilityFeature]</a>
+								</td>
+								<td>Accessibility features of the publication. EPUB use is defined in the Accessibility
+									specification.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility">accessibilityHazard</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessibilityHazard">meta[@property=
+										schema:accessibilityHazard]</a>
+								</td>
+								<td>Potential hazards from the content. EPUB use is defined in the Accessibility
+									specification.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility">accessibilitySummary</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessibilitySummary">meta[@property=
+										schema:accessibilitySummary]</a>
+								</td>
+								<td>Human-readable summary of the accessibility. EPUB use is defined in the
+									Accessibility
+									specification.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility">accessMode</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessMode">meta[@property=
+										schema:accessMode]</a>
+								</td>
+								<td>Access modes of the content. EPUB use is defined in the Accessibility
+									specification.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://w3c.github.io/pub-manifest/#accessibility">accessModeSufficient</a>
+								</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessModeSufficient">meta[@property=
+										schema:accessibilityFeature]</a>
+								</td>
+								<td>Sufficient set(s) of access modes that allow consumption of the content. EPUB use is
+									defined in the Accessibility specification.</td>
+							</tr>
+							<tr>
+								<td>accessibilityAPI</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessibilityAPI">meta[@property=
+										schema:accessibilityFeature]</a>
+								</td>
+								<td>The accessibilityAPI property is optional metadata not typically recommended
+									anymore. It
+									can be expressed in Publication Manifest using the corresponding schema.org
+									property,
+									but is not a part of the specification.</td>
+							</tr>
+							<tr>
+								<td>accessibilityControl</td>
+								<td>
+									<a href="http://www.idpf.org/epub/a11y/#confreq-schema-accessibilityControl">meta[@property=
+										schema:accessibilityControl]</a>
+								</td>
+								<td>The accessibilityControl property is optional metadata not typically recommended
+									anymore. It can be expressed in Publication Manifest using the corresponding
+									schema.org
+									property, but is not a part of the specification.</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</section>
+
+			<section id="extensibility">
+				<h2>Extensibility</h2>
+
+				<table class=zebra>
+					<thead>
+						<tr>
+							<th>Publication Manifest</th>
+							<th>EPUB 3 Package Document</th>
+							<th>Explanation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<a href="https://w3c.github.io/pub-manifest/#extensibility-manifest-properties">@context/{"prefix":
+									"url"}</a>
+							</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#attrdef-package-prefix">package[@prefix]</a>
+							</td>
+							<td>Ability to define prefixes to import terms from additional vocabularies. EPUB uses a
+								single
+								attribute with whitespace-separated prefix/url definitions, whereas in a publication
+								manifest each prefix is separately defined in the context.</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="https://w3c.github.io/pub-manifest/#extensibility-linked-records">LinkedResource/rel=
+									describedby</a>
+							</td>
+							<td>
+								<a
+									href="https://www.w3.org/publishing/epub3/epub-packages.html#sec-linked-records">link[rel=record]</a>
+							</td>
+							<td>Linked metadata records. The "record" relation used by EPUB is not registered with
+								IANA.</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="examples">
+				<h2>Examples</h2>
+
+				<p>The following examples show EPUB 3 package documents that have been transformed into the publication
+					manifest format:</p>
+
+				<ul>
+					<li>
+						<p><a href="#comp" role="button" onclick="loadExample('ebooks4all')">Ebooks for All</a></p>
+					</li>
+					<li>
+						<p><a href="#comp" role="button" onclick="loadExample('pinocchio')">Pinocchio</a></p>
+					</li>
+				</ul>
+
+				<div id="comp">
+					<pre id="epub"></pre>
+					<pre id="pub-manifest"></pre>
+				</div>
+			</section>
+		</main>
+		<script>
+			function loadExample(exid) {
+				try {
+					loadFile('epub', exid + '.txt');
+					loadFile('pub-manifest', exid + '.jsonld');
+				}
+				catch (e) {
+					console.error('Error loading example files:' + e.toString());
+				}
+			}
+
+			function loadFile(id, fileName) {
+				$.ajax({
+					url: 'examples/' + fileName,
+					cache: false,
+					dataType: id == 'epub' ? 'xml' : 'json',
+					success: function (data) {
+						document.getElementById(id).innerHTML = (id == 'epub') ? prettifyXml(data) : JSON.stringify(data, null, 3);
+					},
+					error: function (xhr, status, error) {
+						console.error('File ' + fileName + ' could not be loaded. ' + error);
+					}
+				});
+			}
+
+			var prettifyXml = function (xmlDoc) {
+				var xsltDoc = new DOMParser().parseFromString([
+					'<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">',
+					'  <xsl:output omit-xml-declaration="yes" indent="yes"/>',
+					'  <xsl:template match="node()|@*">',
+					'    <xsl:copy><xsl:apply-templates select="node()|@*"/></xsl:copy>',
+					'  </xsl:template>',
+					'</xsl:stylesheet>',
+				].join('\n'), 'application/xml');
+
+				var xsltProcessor = new XSLTProcessor();
+				xsltProcessor.importStylesheet(xsltDoc);
+				var resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+				var resultXml = new XMLSerializer().serializeToString(resultDoc);
+				return resultXml.replace(/</g, '&lt;');
+			};
+		</script>
+	</body>
+
+</html>

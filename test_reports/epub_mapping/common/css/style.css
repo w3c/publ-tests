@@ -228,3 +228,21 @@ blockquote.large {
     }
 }
 
+
+/* additions for epub mapping */
+
+body {
+    max-width: 55em;
+}
+
+table {
+	width: 100%;
+}
+
+tr > th:nth-child(1),
+tr > th:nth-child(2) {
+	width: 30%;
+}
+tr > th:nth-child(3) {
+	width: 40%
+}
