@@ -246,3 +246,9 @@ tr > th:nth-child(2) {
 tr > th:nth-child(3) {
 	width: 40%
 }
+
+pre {
+	background-color: rgb(250,250,250);
+	height: 15rem;
+	overflow: auto;
+}
