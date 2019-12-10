@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Table of Contents with Unordered List</title>
+		<title>Table of contents with an aside</title>
 		<link rel="publication" href="#manifest">
 		<script id="manifest">
 {
@@ -51,12 +51,22 @@
 		</script>
 	</head>
 	<body>
-		<nav role="doc-toc">
+		<nav role="doc-toc" hidden="hidden">
+			<aside>
+				<h2>Not the Table of Contents</h2>
+				<ul>
+					<li><a href="#c1">Wrong Link</a></li>
+				</ul>
+			</aside>
+			<h2>Table of Contents</h2>
 			<ul>
 				<li>
-					<a href="c01.html">Chapter 1</a>
+					<a href="#c1">Chapter 1</a>
 				</li>
 			</ul>
 		</nav>
+		<section id="c1">
+			<h2>Chapter 1</h2>
+		</section>
 	</body>
 </html>
