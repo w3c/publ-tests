@@ -3,6 +3,7 @@
 	<head>
 		<title>Heading nested inside other elements</title>
 		<link rel="publication" href="#manifest">
+		<link rel="stylesheet" href="css/basic.css">
 		<script id="manifest">
 {
   "@context": [
@@ -51,6 +52,9 @@
 		</script>
 	</head>
 	<body>
+		<header>
+			<h1>Heading nested inside other elements</h1>
+		</header>
 		<nav role="doc-toc">
 			<header>
 				<div>
@@ -65,6 +69,22 @@
 		</nav>
 		<section id="s1">
 			<h2>Section 1</h2>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Test Table of Contents",
+   "entries": [
+      {
+         "name": "Section 1",
+         "url": "#s1",
+         "type": null,
+         "rel": null,
+         "entries": null
+      }
+   ]
+}</pre>
 		</section>
 	</body>
 </html>

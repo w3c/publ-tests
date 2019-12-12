@@ -3,6 +3,7 @@
 	<head>
 		<title>Basic table of contents heading check</title>
 		<link rel="publication" href="#manifest">
+		<link rel="stylesheet" href="css/basic.css">
 		<script id="manifest">{
   "@context": [
       "https://schema.org",
@@ -49,6 +50,9 @@
 }</script>
 	</head>
 	<body>
+		<header>
+			<h1>Basic table of contents heading check</h1>
+		</header>
 		<nav role="doc-toc">
 			<h2>Test Table of Contents</h2>
 			<ol>
@@ -59,6 +63,22 @@
 		</nav>
 		<section id="s1">
 			<h2>Section 1</h2>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Test Table of Contents",
+   "entries": [
+      {
+         "name": "Section 1",
+         "url": "#s1",
+         "type": null,
+         "rel": null,
+         "entries": null
+      }
+   ]
+}</pre>
 		</section>
 	</body>
 </html>

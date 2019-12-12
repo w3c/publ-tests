@@ -3,8 +3,12 @@
 	<head>
 		<title>No resource in manifest identified as table of contents - obtain from referencing page</title>
 		<link rel="publication" href="s4813-02/publication.jsonld">
+		<link rel="stylesheet" href="css/basic.css">
 	</head>
 	<body>
+		<header>
+			<h1>No resource in manifest identified as table of contents - obtain from referencing page</h1>
+		</header>
 		<nav>
 			<h3>Not the Table of Contents</h3>
 			<p>Filler to ensure the actual toc is captured.</p>
@@ -20,6 +24,22 @@
 		</nav>
 		<section id="s1">
 			<h2>Section 1</h2>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Test Table of Contents",
+   "entries": [
+      {
+         "name": "Section 1",
+         "url": "#s1",
+         "type": null,
+         "rel": null,
+         "entries": null
+      }
+   ]
+}</pre>
 		</section>
 	</body>
 </html>

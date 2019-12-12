@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TOC List Nested in Ignored Elements</title>
+		<title>TOC list nested in ignored elements</title>
 		<link rel="publication" href="#manifest">
+		<link rel="stylesheet" href="css/basic.css">
 		<script id="manifest">
 {
   "@context": [
@@ -51,6 +52,9 @@
 		</script>
 	</head>
 	<body>
+		<header>
+			<h1>TOC list nested in ignored elements</h1>
+		</header>
 		<nav role="doc-toc">
 			<h2>Table of Contents</h2>
 			<div>
@@ -65,6 +69,22 @@
 		</nav>
 		<section id="c1">
 			<h2>Chapter 1</h2>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Table of Contents",
+   "entries": [
+      {
+         "name": "Chapter 1",
+         "url": "#c1",
+         "type": null,
+         "rel": null,
+         "entries": null
+      }
+   ]
+}</pre>
 		</section>
 	</body>
 </html>

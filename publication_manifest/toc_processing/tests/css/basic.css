@@ -1,0 +1,41 @@
+
+body {
+	font-size: 62.5%;
+	font-family: sans-serif;
+	max-width: 55rem;
+}
+
+p, li {
+	font-size: 0.9rem;
+}
+
+nav {
+	border: 0.1rem solid black;
+	background-color: rgb(255,255,250);
+	padding: 0.7rem 0;
+}
+
+nav > h2 {
+	margin-left: 1.5rem;
+}
+
+nav ol,
+nav ul {
+	list-style-type: none;
+}
+
+section#result {
+	padding: 1rem;
+	border: 0.1rem solid rgb(0,0,90);
+}
+
+section#result h2 {
+	background-color: rgb(0,0,90);
+	color: rgb(255,255,255);
+	margin: -1rem -1rem 1rem -1rem;
+	padding: 0.3rem;
+}
+
+pre, code {
+	font-size: 0.8rem;
+}

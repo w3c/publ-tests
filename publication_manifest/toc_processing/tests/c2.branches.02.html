@@ -3,6 +3,7 @@
 	<head>
 		<title>Multi-level table of contents</title>
 		<link rel="publication" href="#manifest">
+		<link rel="stylesheet" href="css/basic.css">
 		<script id="manifest">{
   "@context": [
       "https://schema.org",
@@ -49,7 +50,11 @@
 }</script>
 	</head>
 	<body>
+		<header>
+			<h1>Multi-level table of contents</h1>
+		</header>
 		<nav role="doc-toc">
+			<h2>Contents</h2>
 			<ul>
 				<li>
 					<a href="#s1">Section 1</a>
@@ -74,6 +79,38 @@
 					<h4>Section 1.1.1</h4>
 				</section>
 			</section>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Contents",
+   "entries": [
+      {
+         "name": "Section 1",
+         "url": "#s1",
+         "type": null,
+         "rel": null,
+         "entries": [
+            {
+               "name": "Section 1.1",
+               "url": "#s11",
+               "type": null,
+               "rel": null,
+               "entries": [
+                  {
+                     "name": "Section 1.1.1",
+                     "url": "#s111",
+                     "type": null,
+                     "rel": null,
+                     "entries": null
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}</pre>
 		</section>
 	</body>
 </html>
