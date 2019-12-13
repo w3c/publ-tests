@@ -141,6 +141,20 @@
 					"actions": "TOC with a table of contents eight levels deep",
 					"errors": "none",
 					"media-type": "text/html"
+				},
+				{
+					"id": "c2.branches.05",
+					"description": "Table of contents link with a relation",
+					"actions": "The rel property for the toc link has the value author",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.branches.06",
+					"description": "Table of contents link with a media type",
+					"actions": "The type property for the toc link has the value audio/mpeg",
+					"errors": "none",
+					"media-type": "text/html"
 				}
 			]
 		},
@@ -149,6 +163,27 @@
 			"href": "https://www.w3.org/TR/pub-manifest/#manifest",
 			"description": "Tests ensure that sectioning and hidden elements within the table of contents are not processed.",
 			"tests": [
+				{
+					"id": "c2.skipped.01",
+					"description": "TOC list after skipped elements with lists",
+					"actions": "Table of contents with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.skipped.02",
+					"description": "TOC branch with skipped element lists",
+					"actions": "Table of contents with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.skipped.03",
+					"description": "TOC list nested in a skipped element",
+					"actions": "Table of contents is null",
+					"errors": "none",
+					"media-type": "text/html"
+				}
 			]
 		},
 		{

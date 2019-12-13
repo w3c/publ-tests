@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Table of contents link with a relation</title>
+		<link rel="publication" href="#manifest">
+		<link rel="stylesheet" href="css/basic.css">
+		<script id="manifest">{
+  "@context": [
+      "https://schema.org",
+      "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3.org/TR/audiobooks/",
+  "type": "Audiobook",
+  "id": "https://librivox.org/flatland-a-romance-of-many-dimensions-by-edwin-abbott-abbott/",
+  "url": "https://w3c.github.io/pub-manifest/experiments/audiobook/",
+  "name": "TOC Test C2.Title.01",
+  "author": "Edwin Abbott Abbott",
+  "readBy": "Ruth Golding",
+  "inLanguage": "en",
+  "dateModified": "2019-11-14",
+  "datePublished": "2008-10-12",
+  "duration": "PT1371S",
+  "abridged": false,
+  "accessMode": "audio",
+  "accessModeSufficient": [{
+      "type": "ItemList",
+      "itemListElement": ["audio"],
+      "description": "Audio"
+  }],
+  "accessibilityFeature": ["readingOrder", "unlocked"],
+  "accessibilityHazard": "noSoundHazard",
+  "accessibilitySummary": "This is just a test summary",
+  "readingProgression": "ltr",
+  "resources": [
+    {
+      "rel": "cover",
+      "url": "http://ia800704.us.archive.org/9/items/LibrivoxCdCoverArt12/Flatland_1109.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover page with title and author"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "http://www.archive.org/download/flatland_rg_librivox/flatland_1_abbott.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1371S",
+      "name": "Part 1, Sections 1 - 3"
+    }
+  ]
+}</script>
+	</head>
+	<body>
+		<header>
+			<h1>Table of contents link with a relation</h1>
+		</header>
+		<nav role="doc-toc">
+			<h2>Contents</h2>
+			<ul>
+				<li>
+					<a href="#auth" rel="author">About the Author</a>
+				</li>
+			</ul>
+		</nav>
+		<section id="auth">
+			<h2>About the Author</h2>
+		</section>
+		<section id="result">
+			<h2>Result</h2>
+			<p>Result of this test should be a structure like the following:</p>
+			<pre>{
+   "name": "Contents",
+   "entries": [
+      {
+         "name": "About the Auhthor",
+         "url": "#auth",
+         "type": null,
+         "rel": "author",
+         "entries": null
+      }
+   ]
+}</pre>
+		</section>
+	</body>
+</html>
