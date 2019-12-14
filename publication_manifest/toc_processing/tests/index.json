@@ -106,6 +106,13 @@
 					"actions": "TOC with a single link to chapter 1",
 					"errors": "none",
 					"media-type": "text/html"
+				},
+				{
+					"id": "c2.list.02",
+					"description": "Table of contents with two lists",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
 				}
 			]
 		},
@@ -155,6 +162,20 @@
 					"actions": "The type property for the toc link has the value audio/mpeg",
 					"errors": "none",
 					"media-type": "text/html"
+				},
+				{
+					"id": "c2.branches.07",
+					"description": "Inactive link",
+					"actions": "TOC link with no href",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.branches.08",
+					"description": "TOC branch with multiple lists",
+					"actions": "Only the first list is included in the processed TOC",
+					"errors": "none",
+					"media-type": "text/html"
 				}
 			]
 		},
@@ -195,6 +216,20 @@
 					"id": "c2.ignored.01",
 					"description": "TOC list nested in ignored elements",
 					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.ignored.02",
+					"description": "TOC with only ignored elements",
+					"actions": "Table of contents is null",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.ignored.03",
+					"description": "TOC branch with list of ignored elements",
+					"actions": "Table of contents is null",
 					"errors": "none",
 					"media-type": "text/html"
 				}
