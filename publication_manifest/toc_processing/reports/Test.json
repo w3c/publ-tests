@@ -27,5 +27,7 @@
 	"c2.skipped.03"  : true,
 	"c2.ignored.01"  : true,
 	"c2.ignored.02"  : true,
-	"c2.ignored.03"  : true
+	"c2.ignored.03"  : true,
+	"c2.ignored.04"  : true,
+	"c2.ignored.05"  : true
 }

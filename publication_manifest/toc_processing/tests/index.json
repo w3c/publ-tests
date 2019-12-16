@@ -232,6 +232,20 @@
 					"actions": "Table of contents is null",
 					"errors": "none",
 					"media-type": "text/html"
+				},
+				{
+					"id": "c2.ignored.04",
+					"description": "TOC branch with one ignored list item",
+					"actions": "Table of contents has links to chapters 1 and 3",
+					"errors": "none",
+					"media-type": "text/html"
+				},
+				{
+					"id": "c2.ignored.05",
+					"description": "TOC link inside ignored elements",
+					"actions": "TOC with a single link to chapter 1",
+					"errors": "none",
+					"media-type": "text/html"
 				}
 			]
 		}
