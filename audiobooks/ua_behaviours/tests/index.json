@@ -41,7 +41,7 @@
                     "id": "a8.02.01",
                     "description": "The user agent can play the entirety of an audiobook without user input",
                     "actions": "Audiobook playback does not require user input",
-                    "errors": "none",
+                    "errors": "none"
                 },
                 {
                     "id": "a8.02.02",
