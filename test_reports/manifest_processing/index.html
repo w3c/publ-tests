@@ -119,10 +119,10 @@
                             <li>an optional field <code>$href</code> with, as value, a URL to the implementation page;</li>
                             <li>for each implemented test add a field with the test code and a boolean value on whether the test is passed or not (remove the entry if it was not used for testing).</li>
                         </ul>
-                        <p>(See, for example, <a href="./results/PubManifest.json"><code>PubManifest.json</code></a>.)</p>
+                        <p>(See, for example, <a href="../../publication_manifest/manifest_processing/reports/PubManifest.json"><code>PubManifest.json</code></a>.)</p>
                     </li>
-                    <li>Put the new report file into the <code>./results</code> folder (use, preferably the name of the implementation as file name for an easier management).</li>
-                    <li>Modify the <a href="./results/index.json"><code>./results/index.json</code></a> by adding the file name of the report file without the extension.</li>
+                    <li>Put the new report file into the <code>publication_manifest/manifest_processing/reports/</code> (respectively <code>audiobooks/manifest_processing/reports/</code>) folder (use, preferably the name of the implementation as file name for an easier management).</li>
+                    <li>Modify the <a href="../../publication_manifest/manifest_processing/reports/index.json"><code>index.json</code> file in the general manifest processing</a> (respectively <a href="../../audiobooks/manifest_processing/reports/index.json">in the the audiobook manifest processing</a>) folder by adding the file name of the report file without the extension.</li>
                 </ol>        
             </section>
             <section>
@@ -132,8 +132,8 @@
             <section>
                 <h3>Adding a new test</h3>
                 <ol>
-                    <li>Add the new test to the <code>tests/generic</code> or <code>tests/audio</code> subdirectory, following the numbering scheme used in the current tests for the names;</li>
-                    <li>Extend the <a href="./tests/index.json"><code>./tests/index.json</code></a> file with the relevant information.</li>
+                    <li>Add the new test to the <code>publication_manifest/manifest_processing/tests/</code> (respectively <code>audiobooks/manifest_processing/tests/</code>) folder, following the numbering scheme used in the current tests for the names;</li>
+                    <li>Extend the <a href="../../publication_manifest/manifest_processing/tests/index.json"><code>index.json</code> file in the general manifest processing</a> (respectively <a href="../../audiobooks/manifest_processing/tests/index.json">in the the audiobook manifest processing</a>) file with the relevant information.</li>
                 </ol>
             </section>
 
