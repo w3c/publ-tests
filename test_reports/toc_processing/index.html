@@ -5,13 +5,14 @@
 		<meta charset="utf-8" />
 		<title>Implementation Report for the Processing of Tables of Contents</title>
 		<link href="https://www.w3.org/StyleSheets/TR/base" rel="stylesheet" />
-		<link href="common/css/style.css" rel="stylesheet" />
-		<script src="common/js/display_scores.js"></script>
+		<link href="../manifest_processing/common/css/style.css" rel="stylesheet" />
+		<script src="../manifest_processing/common/js/display_scores.js"></script>
 		<script src="../common/js/doc-toc.js"></script>
 		<script>
         const tests = [{
             test_index: '../../publication_manifest/toc_processing/tests/index.json',
-            impl_index: '../../publication_manifest/toc_processing/reports/index.json',
+			impl_index: '../../publication_manifest/toc_processing/reports/index.json',
+			prefix: 'toc'
         }];
 
         async function display() {
@@ -46,7 +47,7 @@
 
 				<p>The implementations that have been submitted for this report are:</p>
 
-				<dl id="publ_manifest_implementations"> </dl>
+				<dl id="toc_implementations"> </dl>
 
 				<section>
 					<h4>Test results overview</h4>
@@ -63,7 +64,7 @@
 				</section>
 			</section>
 
-			<section id="test_descriptions">
+			<section id="toc_tests">
 				<h2>Description of the individual tests</h2>
 			</section>
 
@@ -86,9 +87,9 @@
 									testing).</li>
 							</ul>
 						</li>
-						<li>Put the new report file into the <code>./results</code> folder (use, preferably the name of
+						<li>Put the new report file into the <code>publication_manifest/toc_processing/reports/</code> folder (use, preferably the name of
 							the implementation as file name for an easier management).</li>
-						<li>Modify the <a href="./results/index.json"><code>./results/index.json</code></a> by adding
+						<li>Modify the <a href="../../publication_manifest/toc_processing/reports/index.json"><code>index.json</code></a> by adding
 							the file name of the report file without the extension.</li>
 					</ol>
 				</section>
@@ -102,7 +103,7 @@
 						<li>Add the new test to the <code>publication_manifest/toc_processing/tests/</code> directory in
 							this repository following the numbering scheme used in the current tests for the names.</li>
 						<li>Extend the <a href="../../publication_manifest/toc_processing/tests/index.json"
-									><code>../../publication_manifest/toc_processing/tests/index.json</code></a> file
+									><code>index.json</code></a> file
 							with the relevant information.</li>
 					</ol>
 				</section>
