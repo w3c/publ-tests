@@ -1,0 +1,109 @@
+{
+  "date": "2020-01-05",
+  "title": "Tests related to LPF processing",
+  "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/",
+  "tests": [
+      {
+          "section": "§4 Packaging format",
+          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-zip",
+          "tests": [
+              {
+                  "id": "t4.01",
+                  "format": "zip",
+                  "description": "This specification uses the ZIP format as specified in ISO/IEC 21320-1:2015.",
+                  "actions": "Check that the tested package is a compliant zip file",
+                  "errors": "none",
+                  "media-type": "application/zip"
+              }
+          ]
+      },
+      {
+          "section": "§5. Compression of resources",
+          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-compression",
+          "tests": [
+              {
+                  "id": "t5.01",
+                  "description": "Resources with Non-Codec content types SHOULD be compressed and the Deflate compression algorithm MUST be used.",
+                  "actions": "Check that each html file is stored deflated in the tested package",
+                  "errors": "none",
+                  "media-type": "application/zip"
+              },
+              {
+                  "id": "t5.02",
+                  "description": "Resources with Codec content types SHOULD be stored without compression.",
+                  "actions": "Check that each mp4 file is stored without compression in the tested package",
+                  "errors": "none",
+                  "media-type": "application/zip"
+              }
+          ]
+      },
+      {
+          "section": "§6 File and directory structure",
+          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-structure",
+          "tests": [
+              {
+                  "id": "t6.01",
+                  "description": "A Package MUST include at least one of the following files in its Root Directory: A file named publication.json, which MUST be in the format defined for Publication Manifests. A file named index.html which MUST follow the requirements of the Primary Entry Page of a digital publication.",
+                  "actions": "Extract publication.json from the tested package and check that it is a valid publication manifest",
+                  "errors": "none",
+                  "media-type": "application/zip"
+              },
+              {
+                "id": "t6.02",
+                "description": "A Package MUST include at least one of the following files in its Root Directory: A file named publication.json, which MUST be in the format defined for Publication Manifests. A file named index.html which MUST follow the requirements of the Primary Entry Page of a digital publication.",
+                "actions": "Extract index.html file from the tested package and check that it is a well formed html structure",
+                "errors": "none",
+                "media-type": "application/zip"
+              },
+              {
+                "id": "t6.03",
+                "description": "The index.html file MUST follow the requirements of the Primary Entry Page of a digital publication.",
+                "actions": "Extract a valid publication manifest from index.html",
+                "errors": "none",
+                "media-type": "application/zip"
+              },
+              {
+                "id": "t6.04",
+                "description": "A Package MUST include at least one of the following files in its Root Directory: A file named publication.json, which MUST be in the format defined for Publication Manifests. A file named index.html which MUST follow the requirements of the Primary Entry Page of a digital publication.",
+                "actions": "Check that no publication.json or index.html file is found in the root directory of the tested package",
+                "errors": "fatal error on missing publication manifest",
+                "media-type": "application/zip"
+              },
+              {
+                "id": "t6.05",
+                "description": "A Package MUST include all resources within the bounds of the digital publication.",
+                "actions": "Check that all html files referenced in the publication manifest are present in the tested package.",
+                "errors": "none",
+                "media-type": "application/zip"
+              },
+              {
+                "id": "t6.06",
+                "description": "A Package MUST include all resources within the bounds of the digital publication.",
+                "actions": "Check that an html file referenced in the publication manifest is absent from the tested package.",
+                "errors": "fatal error on missing resource",
+                "media-type": "application/zip"
+              },
+              {
+                "id": "t6.07",
+                "description": "Contents within the Package MUST reference these resources via relative-URL strings.",
+                "actions": "Return a CSS file which is referenced from an html file via a relative-URL string.",
+                "errors": "none",
+                "media-type": "application/zip"
+              }
+        ]
+      },
+      {
+          "section": "§7 Obtaining a publication manifest",
+          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-obtaining-manifest",
+          "tests": [
+              {
+                  "id": "t7.01",
+                  "description": "If both index.html and publication.json are present in the Package, then the Primary Entry Page SHOULD contain a reference to the publication.json file.",
+                  "actions": "Check that the reference to the manifest in index.html points to publication.json",
+                  "errors": "none",
+                  "media-type": "application/zip"
+              }
+          ]
+      }
+  ]
+}
