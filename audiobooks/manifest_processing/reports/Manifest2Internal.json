@@ -1,6 +1,7 @@
 {
-    "$name"        : "Test",
-    "$description" : "This is just a dummy to test the reporting mechanism.",
+    "$name"        : "Manifest2Internal",
+    "$description" : "Test implementation of the processing algorithm in JavaScript.",
+    "$href"        : "https://github.com/w3c/pub-manifest/tree/master/experiments/manifest-to-internal-processor",
     "a4.2.01"      : true,
     "a4.2.02"      : true,
     "a4.2.03"      : true,
@@ -13,6 +14,6 @@
     "a5.5.02"      : true,
     "a5.5.03"      : true,
     "a5.6.01"      : true,
-    "a5.6.02"      : false,
+    "a5.6.02"      : true,
     "a5.7.01"      : true
 }
