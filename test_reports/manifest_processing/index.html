@@ -19,6 +19,10 @@
             test_index: '../../audiobooks/manifest_processing/tests/index.json',
             impl_index: '../../audiobooks/manifest_processing/reports/index.json',
             prefix: 'audiobooks'
+        }, {
+            test_index: '../../audiobooks/ua_behaviours/tests/index.json',
+            impl_index: '../../audiobooks/ua_behaviours/reports/index.json',
+            prefix: 'ua_behaviours'
         }];
 
         async function display() {
@@ -28,7 +32,7 @@
             // Generate the TOC
             handleDocToc();
         }
-        window.addEventListener('load', display);   
+        window.addEventListener('load', display);
     </script>
 </head>
 
@@ -94,6 +98,29 @@
                     </table>
                 </section>
             </section>
+
+            <section>
+              <h3>Audiobook user agent behaviour</h3>
+
+              <p>The implementations that have been submitted for this report are:</p>
+              <dl id="audiobooks_implementations">
+              </dl>
+
+              <section>
+                <h4>Test results overview</h4>
+                <table id="us_behaviours_results" class="zebra">
+                  <thead>
+                    <tr id="behaviours_header_row">
+                      <th>No.</th>
+                      <th>Test</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody id="behaviours_table_body">
+                  </tbody>
+                </table>
+              </section>
+            </section>
         </section>
 
         <section id='test_descriptions'>
@@ -112,7 +139,7 @@
             <section>
                 <h3>Adding a new implementation report</h3>
                 <ol>
-                    <li>Create a new JSON report file. The file format is simple: 
+                    <li>Create a new JSON report file. The file format is simple:
                         <ul>
                             <li>a field <code>$name</code> with, as value, the name of the implementation (will be used as the column label for the results;</li>
                             <li>a field <code>$description</code> with, as value, the short description of the implementation;</li>
