@@ -1,5 +1,5 @@
 {
-    "$name"        : "Manifest2InternalProcessor",
+    "$name"        : "Manifest2Internal",
     "$description" : "Test implementation of the processing algorithm in JavaScript.",
     "$href"        : "https://github.com/w3c/pub-manifest/tree/master/experiments/manifest-to-internal-processor",
     "m4.01"        : true,
