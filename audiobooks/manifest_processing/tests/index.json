@@ -139,6 +139,13 @@
                     "actions": "Links with 'rel' including cover should be reported as missing",
                     "errors": "Validation errors for missing cover",
                     "media-type": "application/ld+json"
+                },
+                {
+                    "id": "a5.7.02",
+                    "description": "A cover page should be set; the rel value with mixed case should be accepted",
+                    "actions": "Output of the manifest",
+                    "errors": "none",
+                    "media-type": "application/ld+json"
                 }
             ]
         }
