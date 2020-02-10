@@ -640,6 +640,14 @@
                     "actions": "An application-dependent name should be added",
                     "errors": "Validation error on a missing default title",
                     "media-type": "text/html"
+                },
+                {
+                    "id": "m6.07",
+                    "format": "html",
+                    "description": "A single document publication, where the reading order uses an empty string to refer to itself.",
+                    "actions": "Display the manifest",
+                    "errors": "none",
+                    "media-type": "text/html"
                 }
             ]
         }
