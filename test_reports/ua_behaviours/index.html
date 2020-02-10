@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Implementation Report for the Processing of Tables of Contents</title>
+		<link href="https://www.w3.org/StyleSheets/TR/base" rel="stylesheet" />
+		<link href="../manifest_processing/common/css/style.css" rel="stylesheet" />
+		<script src="../manifest_processing/common/js/display_scores.js"></script>
+		<script src="../common/js/doc-toc.js"></script>
+		<script>
+        const tests = [{
+            test_index: '../../publication_manifest/toc_processing/tests/index.json',
+			impl_index: '../../publication_manifest/toc_processing/reports/index.json',
+			prefix: 'toc'
+        }];
+
+        async function display() {
+            tests.forEach((block) => {
+                const dummy = display_test_suite(block);
+            })
+            // Generate the TOC
+            handleDocToc();
+        }
+        window.addEventListener('load', display);   
+    </script>
+	</head>
+
+	<body>
+		<header>
+			<p>
+				<a href="http://www.w3.org/">
+					<img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72" />
+				</a>
+			</p>
+			<h1> Implementation Report for the Processing of Tables of Contents </h1>
+			<nav role="doc-toc" data-options="dynamic max_depth=3 use_sections"></nav>
+		</header>
+		<main>
+			<p>These tests, and the implementation report, refer to the <a
+					href="https://www.w3.org/TR/pub-manifest/#app-toc-structure">“Machine-Processable Table of
+					Contents”</a> section of the <a href="https://www.w3.org/TR/pub-manifest">“Publication Manifest”</a>
+				specification.</p>
+
+			<section>
+				<h2>Test results</h2>
+
+				<p>The implementations that have been submitted for this report are:</p>
+
+				<dl id="toc_implementations"> </dl>
+
+				<section>
+					<h4>Test results overview</h4>
+					<table id="toc_results" class="zebra">
+						<thead>
+							<tr id="toc_header_row">
+								<th>No.</th>
+								<th>Test</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody id="toc_table_body"> </tbody>
+					</table>
+				</section>
+			</section>
+
+			<section id="toc_tests">
+				<h2>Description of the individual tests</h2>
+			</section>
+
+			<section>
+				<h2>Contributing to the reports</h2>
+				<p>The actions below are described as adding/modifying files; this should be understood as changes on
+					submitter’s own copy which should then be submitted, via a Pull Request, to the test repository.</p>
+				<section>
+					<h3>Adding a new implementation report</h3>
+					<ol>
+						<li>Create a new JSON report file. The file format is simple: <ul>
+								<li>a field <code>$name</code> with, as value, the name of the implementation (will be
+									used as the column label for the results;</li>
+								<li>a field <code>$description</code> with, as value, the short description of the
+									implementation;</li>
+								<li>an optional field <code>$href</code> with, as value, a URL to the implementation
+									page;</li>
+								<li>for each implemented test add a field with the test code and a boolean value on
+									whether the test is passed or not (remove the entry if it was not used for
+									testing).</li>
+							</ul>
+						</li>
+						<li>Put the new report file into the <code>publication_manifest/toc_processing/reports/</code> folder (use, preferably the name of
+							the implementation as file name for an easier management).</li>
+						<li>Modify the <a href="../../publication_manifest/toc_processing/reports/index.json"><code>index.json</code></a> by adding
+							the file name of the report file without the extension.</li>
+					</ol>
+				</section>
+				<section>
+					<h2>Modifying an existing implementation report</h2>
+					<p>Provide a new pull request for the updated implementation JSON file.</p>
+				</section>
+				<section>
+					<h3>Adding a new test</h3>
+					<ol>
+						<li>Add the new test to the <code>publication_manifest/toc_processing/tests/</code> directory in
+							this repository following the numbering scheme used in the current tests for the names.</li>
+						<li>Extend the <a href="../../publication_manifest/toc_processing/tests/index.json"
+									><code>index.json</code></a> file
+							with the relevant information.</li>
+					</ol>
+				</section>
+
+
+			</section>
+		</main>
+	</body>
+</html>

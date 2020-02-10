@@ -1,0 +1,14 @@
+{
+    "$name"          : "Test",
+    "$description"   : "This is just a dummy to test the reporting mechanism.",
+    "a8.1.01"        : true,
+    "a8.1.02"        : true,
+    "a8.1.03"        : true,
+    "a8.1.04"        : true,
+    "a8.2.01"        : true,
+    "a8.2.02"        : true,
+    "a8.2.03"        : true,
+    "a8.3.01"        : true,
+    "a8.3.02"        : true,
+    "a8.3.03"        : true
+}
