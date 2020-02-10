@@ -158,7 +158,25 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
             h5.innerHTML = `Test "${test.id}"`;
             test_section_dom.append(h5);
 
-            const format: string = test["media-type"] === "text/html" ? 'html' : 'jsonld';
+            let format: string;
+            if (test["media-type"]) {
+                switch (test["media-type"]) {
+                    case "text/html" : 
+                        format = 'html'
+                        break;
+                    case "application/ld+json" :
+                        format = 'json-ld'
+                        break;
+                    case "application/lpf+zip" :
+                        format = 'lpf'
+                        break;
+                    default:
+                        format = "n/a"
+                }
+            } else {
+                format = "n/a"
+            }
+
             const fname: string  = `test_${test.id}.${format}`;
             const fileref: string = [...preamble, fname].join('/');
 
@@ -166,8 +184,10 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
             add_item(dl, 'Description:', test.description);
             add_item(dl, 'Expected action(s):', test.actions);
             add_item(dl, 'Expected errors:', test.errors);
-            add_item(dl, 'Test file format:', format === 'html' ? 'html' : 'json-ld');
-            add_item(dl, 'Source code:', `See <a href="${fileref}">${fname}</a>.`);
+            add_item(dl, 'Test file format:', format);
+            if (format !== 'n/a') {
+                add_item(dl, 'Source code:', `See <a href="${fileref}">${fname}</a>.`);
+            }
             test_section_dom.append(dl);
 
             // Filling in the values for the table data for that specific test
@@ -269,14 +289,18 @@ function display_scores(scores: TestScore[], implementations: Implementation[], 
 
 
 async function display_test_suite(test_block: TestBlock) {
-    const {test_index, impl_index, prefix} = test_block;  
+    try {
+        const {test_index, impl_index, prefix} = test_block;  
 
-    const tests = await get_json(test_index);
-    const implementations = await get_implementations(impl_index);
+        const tests = await get_json(test_index);
+        const implementations = await get_implementations(impl_index);
 
-    const test_listing = document.getElementById(`${prefix}_tests`);
-    const scores = display_test_groups(test_listing, tests, implementations, test_index);
+        const test_listing = document.getElementById(`${prefix}_tests`);
+        const scores = display_test_groups(test_listing, tests, implementations, test_index);
 
-    display_scores(scores, implementations, prefix);
-    display_implementations(implementations, prefix)
+        display_scores(scores, implementations, prefix);
+        display_implementations(implementations, prefix);
+    } catch(e) {
+        alert(`${e.message}, ${e.name}`);
+    }
 }

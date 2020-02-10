@@ -1,6 +1,6 @@
 {
     "date": "2019-12-31",
-    "title": "Tests for Audiobooks User Agent Behaviours",
+    "title": "Tests for Audiobooks User Agent Behaviors",
     "href": "https://www.w3.org/TR/audiobooks/",
     "tests": [
         {
@@ -20,13 +20,13 @@
                     "errors": "none"
                 },
                 {
-                    "id": "a8.01.03",
+                    "id": "a8.1.03",
                     "description": "If available, the user agent has provided a means to access the table of contents to the user",
                     "actions": "Table of Contents is accessible by the user",
                     "errors": "none"
                 },
                 {
-                    "id": "a8.01.04",
+                    "id": "a8.1.04",
                     "description": "If the audiobook contains a primary entry page, it is displayed first (or the content within is presented first)",
                     "actions": "Primary Entry Page is displayed first",
                     "errors": "none"
@@ -38,25 +38,25 @@
             "href": "https://www.w3.org/TR/audiobooks/#audio-ua-playback",
             "tests": [
                 {
-                    "id": "a8.02.01",
+                    "id": "a8.2.01",
                     "description": "The user agent can play the entirety of an audiobook without user input",
                     "actions": "Audiobook playback does not require user input",
                     "errors": "none"
                 },
                 {
-                    "id": "a8.02.02",
+                    "id": "a8.2.02",
                     "description": "The user agent plays the content in the order of the reading order",
                     "actions": "Audiobook playback is in the reading order by default",
                     "errors": "none"
                 },
                 {
-                    "id": "a8.02.03",
+                    "id": "a8.2.03",
                     "description": "The user agent can accept user input for audio controls",
                     "actions": "Audiobook playback can be paused",
                     "errors": "none"
                 },
                 {
-                    "id": "a8.02.03",
+                    "id": "a8.2.03",
                     "description": "The user agent provides a method to move between parts of the audiobooks (time increments, chapters, etc.)",
                     "actions": "Audiobook playback can be navigated through",
                     "errors": "none"
@@ -68,18 +68,18 @@
             "href": "https://www.w3.org/TR/audiobooks/#audio-ua-packaging",
             "tests": [
                 {
-                    "id": "a8.03.01",
+                    "id": "a8.3.01",
                     "description": "The user agent provides a way to download or offline the audiobook content",
                     "actions": "User agent provides a method to download the audiobook",
                     "errors": "none"
                 },
                 {
-                    "id": "a8.03.02",
+                    "id": "a8.3.02",
                     "description": "The user agent can open an audiobook packaged using LPF",
                     "actions": "User agent can open an LPF audiobook",
                     "errors": "none"
                 }
             ]
-        },
+        }
     ]
 }
