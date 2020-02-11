@@ -1,0 +1,245 @@
+{
+  "@context": ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+  "conformsTo" : "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "@id": "https://librivox.org/the-crimson-fairy-book-by-andrew-lang/",
+  "name": "The Crimson Fairy Book",
+  "author": "Andrew Lang",
+  "readBy" : "Various",
+  "duration" : "PT36279S",
+  "readingOrder": [{
+    "type" : "LinkedResource",
+    "name": "00 - Preface",
+    "url": "crimsonfairybook_00_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT314S"
+  },{
+    "type" : "LinkedResource",
+    "name": "01 - Lovely Ilonka",
+    "url": "crimsonfairybook_01_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT648S"
+  },{
+    "type" : "LinkedResource",
+    "name": "02 - Lucky Luck",
+    "url": "crimsonfairybook_02_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1206S"
+  },{
+    "type" : "LinkedResource",
+    "name": "03 - The Hairy Man",
+    "url": "crimsonfairybook_03_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT652S"
+  },{
+    "type" : "LinkedResource",
+    "name": "04 - To your Good Health!",
+    "url": "crimsonfairybook_04_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT784S"
+  },{
+    "type" : "LinkedResource",
+    "name": "05 - The Story of the Seven Simons",
+    "url": "crimsonfairybook_05_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1997S"
+  },{
+    "type" : "LinkedResource",
+    "name": "06 - The Language of Beasts",
+    "url": "crimsonfairybook_06_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT476S"
+  },{
+    "type" : "LinkedResource",
+    "name": "07 - The Boy who could keep a Secret",
+    "url": "crimsonfairybook_07_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1099S"
+  },{
+    "type" : "LinkedResource",
+    "name": "08 - The Prince and the Dragon",
+    "url": "crimsonfairybook_08_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1300S"
+  },{
+    "type" : "LinkedResource",
+    "name": "09 - Little Wildrose",
+    "url": "crimsonfairybook_09_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1378S"
+  },{
+    "type" : "LinkedResource",
+    "name": "10 - Tiidu the Piper",
+    "url": "crimsonfairybook_10_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1821S"
+  },{
+    "type" : "LinkedResource",
+    "name": "11 - Paperarello",
+    "url": "crimsonfairybook_11_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1018S"
+  },{
+    "type" : "LinkedResource",
+    "name": "12 - The Gifts of the Magician",
+    "url": "crimsonfairybook_12_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1011S"
+  },{
+    "type" : "LinkedResource",
+    "name": "13 - The Strong Prince",
+    "url": "crimsonfairybook_13_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT764S"
+  },{
+    "type" : "LinkedResource",
+    "name": "14 - The Treasure Seeker",
+    "url": "crimsonfairybook_14_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT2094S"
+  },{
+    "type" : "LinkedResource",
+    "name": "15 - The Cottager and his Cat",
+    "url": "crimsonfairybook_15_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT573S"
+  },{
+    "type" : "LinkedResource",
+    "name": "16 - The Prince who would seek Immortality",
+    "url": "crimsonfairybook_16_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1383S"
+  },{
+    "type" : "LinkedResource",
+    "name": "17 - The Stone-cutter",
+    "url": "crimsonfairybook_17_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT521S"
+  },{
+    "type" : "LinkedResource",
+    "name": "18 - The Gold-bearded Man",
+    "url": "crimsonfairybook_18_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1243S"
+  },{
+    "type" : "LinkedResource",
+    "name": "19 - Tritill, Litill, and the Birds",
+    "url": "crimsonfairybook_19_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT910S"
+  },{
+    "type" : "LinkedResource",
+    "name": "20 - The Three Robes",
+    "url": "crimsonfairybook_20_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1047S"
+  },{
+    "type" : "LinkedResource",
+    "name": "21 - The Six Hungry Beasts",
+    "url": "crimsonfairybook_21_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT927S"
+  },{
+    "type" : "LinkedResource",
+    "name": "22 - How the Beggar Boy turned into Count Piro",
+    "url": "crimsonfairybook_22_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT931S"
+  },{
+    "type" : "LinkedResource",
+    "name": "23 - The Rogue and the Herdsman",
+    "url": "crimsonfairybook_23_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT797S"
+  },{
+    "type" : "LinkedResource",
+    "name": "24 - Eisenkopf",
+    "url": "crimsonfairybook_24_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT967S"
+  },{
+    "type" : "LinkedResource",
+    "name": "25 - The Death of Abu Nowas and of his Wife",
+    "url": "crimsonfairybook_25_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT675S"
+  },{
+    "type" : "LinkedResource",
+    "name": "26 - Motikatika",
+    "url": "crimsonfairybook_26_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT411S"
+  },{
+    "type" : "LinkedResource",
+    "name": "27 - Niels and the Giants",
+    "url": "crimsonfairybook_27_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1363S"
+  },{
+    "type" : "LinkedResource",
+    "name": "28 - Shepherd Paul",
+    "url": "crimsonfairybook_28_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT911S"
+  },{
+    "type" : "LinkedResource",
+    "name": "29 - How the wicked Tanuki was punished",
+    "url": "crimsonfairybook_29_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT347S"
+  },{
+    "type" : "LinkedResource",
+    "name": "30 - The Crab and the Monkey",
+    "url": "crimsonfairybook_30_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT380S"
+  },{
+    "type" : "LinkedResource",
+    "name": "31 - The Horse Gullfaxi and the Sword Gunnfoder",
+    "url": "crimsonfairybook_31_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1155S"
+  },{
+    "type" : "LinkedResource",
+    "name": "32 - The Story of the Sham Prince, or the Ambitious Tailor",
+    "url": "crimsonfairybook_32_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT2049S"
+  },{
+    "type" : "LinkedResource",
+    "name": "33 - The Colony of Cats",
+    "url": "crimsonfairybook_33_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT1225S"
+  },{
+    "type" : "LinkedResource",
+    "name": "34 - How to find out a True Friend",
+    "url": "crimsonfairybook_34_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT842S"
+  },{
+    "type" : "LinkedResource",
+    "name": "35 - Clever Maria",
+    "url": "crimsonfairybook_35_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT515S"
+  },{
+    "type" : "LinkedResource",
+    "name": "36 - The Magic Kettle",
+    "url": "crimsonfairybook_36_lang_64kb.mp3",
+    "encodingFormat": "audio/mpeg",
+    "duration" : "PT545S"
+  }],
+  "resources": [{
+    "type" : "LinkedResource",
+    "url" : "crimson.html",
+    "name" : "Table of Contents",
+    "encodingFormat" : "text/html",
+    "rel" : "contents"
+    },{
+    "type" : "LinkedResource",
+    "url" : "crimson_fairy_book_1208.jpg",
+    "rel" : "cover",
+    "encodingFormat" : "image/jpeg"
+      }]
+}
