@@ -407,9 +407,9 @@
                 },
                 {
                     "id": "m4.7.2.1.03",
-                    "description": "A missing 'readingOrder' is replaced by a default",
-                    "actions": "A 'readingOrder' is added with a single link set to the HTML Nodes Document.URL. If none provided, validation error",
-                    "errors": "Validation error on invalid URL, and a validation error on removing the corresponding Linked Resource",
+                    "description": "A missing 'readingOrder'",
+                    "actions": "Without a referring document to be added to the list, the 'readingOrder' is empty, which is a fatal error",
+                    "errors": "Fatal error",
                     "media-type": "application/ld+json"
                 },
                 {
@@ -644,12 +644,20 @@
                 {
                     "id": "m6.07",
                     "format": "html",
-                    "description": "A single document publication, where the reading order uses an empty string to refer to itself.",
+                    "description": "The URL of the Primary Entry Point MUST be in either the resources' list or the reading order",
                     "actions": "Display the manifest",
+                    "errors": "Validation error on the PEP URL missing from both the resources and the reading order.",
+                    "media-type": "text/html"
+                },
+                {
+                    "id": "m6.08",
+                    "format": "html",
+                    "description": "If the 'readingOrder' is empty, the URL of the Primary Entry Page is used as a default",
+                    "actions": "The external manifest should be processed and generated with the reading order set to the entry point's URL. The value should also be present in the 'uniqueResources' array.",
                     "errors": "none",
                     "media-type": "text/html"
                 }
-            ]
+           ]
         }
     ]
 }
