@@ -26,12 +26,13 @@
   "accessibilitySummary": "This is just a test summary",
   "readingProgression": "ltr",
   "resources": [
-	{
+	  {
       "rel": "cover",
       "url": "http://ia800704.us.archive.org/9/items/LibrivoxCdCoverArt12/Flatland_1109.jpg",
       "encodingFormat": "image/jpeg",
       "name": "Cover page with title and author"
-    }
+    },
+    "../s4.8.1.3.02.html"
   ],
   "readingOrder": [
     {
