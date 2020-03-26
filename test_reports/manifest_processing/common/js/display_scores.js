@@ -89,7 +89,7 @@ function display_test_groups(group_section_dom, document_tests, implementations,
                         format = 'html';
                         break;
                     case "application/ld+json":
-                        format = 'jsonld';
+                        format = 'json-ld';
                         break;
                     case "application/lpf+zip":
                         format = 'lpf';
@@ -101,7 +101,7 @@ function display_test_groups(group_section_dom, document_tests, implementations,
             else {
                 format = "n/a";
             }
-            const fname = `${test.id}.${format}`;
+            const fname = `test_${test.id}.${format}`;
             const fileref = [...preamble, fname].join('/');
             const dl = document.createElement('dl');
             add_item(dl, 'Description:', test.description);

@@ -165,7 +165,7 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
                         format = 'html'
                         break;
                     case "application/ld+json" :
-                        format = 'jsonld'
+                        format = 'json-ld'
                         break;
                     case "application/lpf+zip" :
                         format = 'lpf'
@@ -177,7 +177,7 @@ function display_test_groups(group_section_dom: HTMLElement, document_tests: Doc
                 format = "n/a"
             }
 
-            const fname: string  = `${test.id}.${format}`;
+            const fname: string  = `test_${test.id}.${format}`;
             const fileref: string = [...preamble, fname].join('/');
 
             const dl: HTMLElement = document.createElement('dl');
