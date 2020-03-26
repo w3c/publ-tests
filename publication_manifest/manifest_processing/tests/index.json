@@ -456,7 +456,7 @@
                     "id": "m4.7.2.3.01",
                     "description": "The 'links' can be expressed as a single relative URL",
                     "actions": "The input is converted into an array of a single object, with the 'url' set to the absolute URL",
-                    "errors": "The result is generated, though a warning is issued due to a missing link.",
+                    "errors": "The result is generated, though a warning is issued due to a missing link property.",
                     "media-type": "application/ld+json"
                 },
                 {
