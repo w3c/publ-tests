@@ -6,10 +6,11 @@
     "url": "https://example.org/book",
     "conformsTo": "https://www.w3.org/TR/pub-manifest/",
     "readingOrder": "chapter1.html",
-    "links": [
-        "other_link1.html",
-        {
-            "url": "http://example%w3%org/illegal.html"
-        }
-    ]
+    "links": [{
+        "url" : "other_link1.html",
+        "rel" : ["other"]
+    },{
+        "url": "http://example%w3%org/illegal.html",
+        "rel" : ["other"]
+    }]
 }
