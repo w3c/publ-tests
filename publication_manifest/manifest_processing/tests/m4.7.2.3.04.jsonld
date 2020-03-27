@@ -12,13 +12,26 @@
     "resources": [
         "link1.html"
     ],
-    "links": [
-        "link1.html",
-        "link2.html",
-        "link1.html#fragment",
-        "link3.html",
-        "link2.html",
-        "chapter1.html",
-        "link4.html"
-    ]
+    "links": [{
+        "url" : "link1.html",
+        "rel" : ["other"]
+    },{
+        "url": "link2.html",
+        "rel" : ["other"]
+    },{
+        "url": "link1.html#fragment",
+        "rel" : ["other"]
+    },{
+        "url": "link3.html",
+        "rel" : ["other"]
+    },{
+        "url": "link2.html",
+        "rel" : ["other"]
+    },{
+        "url": "chapter1.html",
+        "rel" : ["other"]
+    },{
+        "url": "link4.html",
+        "rel" : ["other"]
+    }]
 }
