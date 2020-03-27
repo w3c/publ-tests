@@ -8,7 +8,7 @@
     "readingOrder": [
         "chapter1.html",
         {
-            "url": "http://example.w3.org/%illegal.html"
+            "url": "http://example%w3%org/illegal.html"
         }
     ]
 }
