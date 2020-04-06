@@ -6,6 +6,16 @@
     "url": "https://example.org/book",
     "conformsTo": ["https://www.w3.org/TR/audiobooks/"],
     "readingOrder": [
-        "chapter1.html"
+        {
+            "url": "chapter1.mp3",
+            "encodingFormat": "audio/mpeg"
+        }
+    ],
+    "resources": [
+      {
+        "rel": "contents",
+        "url": "html/toc.html",
+        "encodingFormat": "text/html"
+      }
     ]
 }
