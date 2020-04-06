@@ -9,7 +9,6 @@
             "tests": [
                 {
                     "id": "a4.2.01",
-                    "format": "html",
                     "description": "A manifest may be linked via a 'link' element in the primary entry page, with the TOC reference in the manifest",
                     "actions": "Output the manifest",
                     "errors": "none",
@@ -17,7 +16,6 @@
                 },
                 {
                     "id": "a4.2.02",
-                    "format": "html",
                     "description": "A manifest without a TOC may be linked via a 'link' element in the primary entry page but with a TOC within the HTML file",
                     "actions": "Output the manifest",
                     "errors": "none",
@@ -25,7 +23,6 @@
                 },
                 {
                     "id": "a4.2.03",
-                    "format": "html",
                     "description": "A manifest may be embedded via a 'script' element in the primary entry page, with the TOC reference in the manifest",
                     "actions": "Output the manifest",
                     "errors": "none",
@@ -33,7 +30,6 @@
                 },
                 {
                     "id": "a4.2.04",
-                    "format": "html",
                     "description": "A manifest without a TOC embedded via a 'script' element in the primary entry page but with a TOC within the HTML file",
                     "actions": "Output the manifest",
                     "errors": "none",
@@ -41,7 +37,6 @@
                 },
                 {
                     "id": "a4.2.05",
-                    "format": "html",
                     "description": "There must be a TOC, either in the manifest (linked or embedded) or in the Primary Entry Page",
                     "actions": "Output the manifest",
                     "errors": "Validation error on missing TOC",

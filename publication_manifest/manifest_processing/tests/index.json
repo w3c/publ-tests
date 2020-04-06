@@ -609,7 +609,6 @@
             "tests": [
                 {
                     "id": "m6.01",
-                    "format": "html",
                     "description": "The manifest may be linked via a 'link' element in the primary entry page",
                     "actions": "The separate manifest file (link_6.01.jsonld) should be processed and generated",
                     "errors": "none",
@@ -617,7 +616,6 @@
                 },
                 {
                     "id": "m6.02",
-                    "format": "html",
                     "description": "The manifest may embedded, via a 'script' element, into the primary entry page",
                     "actions": "The embedded manifest should be processed and generated",
                     "errors": "none",
@@ -625,7 +623,6 @@
                 },
                 {
                     "id": "m6.03",
-                    "format": "html",
                     "description": "If the 'name' entry is not present, the 'title' element of the primary entry page may be used instead",
                     "actions": "The embedded manifest should be processed and generated with an additional name",
                     "errors": "none",
@@ -633,7 +630,6 @@
                 },
                 {
                     "id": "m6.04",
-                    "format": "html",
                     "description": "When reusing the title for 'name', the language and direction set in HTML is valid",
                     "actions": "The embedded manifest should be processed and generated with an additional name",
                     "errors": "none",
@@ -641,7 +637,6 @@
                 },
                 {
                     "id": "m6.05",
-                    "format": "html",
                     "description": "If the 'readingOrder' is empty, the URL of the Primary Entry Page is used as a default",
                     "actions": "The embedded manifest should be processed and generated with the reading order set to the HTML's URL. The value should also be present in the 'uniqueResources' array.",
                     "errors": "none",
@@ -649,7 +644,6 @@
                 },
                 {
                     "id": "m6.06",
-                    "format": "html",
                     "description": "There should be either a 'name' or a usable 'title' in the Primary Entry Page.",
                     "actions": "An application-dependent name should be added",
                     "errors": "Validation error on a missing default title",
@@ -657,7 +651,6 @@
                 },
                 {
                     "id": "m6.07",
-                    "format": "html",
                     "description": "The URL of the Primary Entry Point MUST be in either the resources' list or the reading order",
                     "actions": "Display the manifest",
                     "errors": "Validation error on the PEP URL missing from both the resources and the reading order.",
@@ -665,7 +658,6 @@
                 },
                 {
                     "id": "m6.08",
-                    "format": "html",
                     "description": "If the 'readingOrder' is empty, the URL of the Primary Entry Page is used as a default",
                     "actions": "The external manifest should be processed and generated with the reading order set to the entry point's URL. The value should also be present in the 'uniqueResources' array.",
                     "errors": "none",
