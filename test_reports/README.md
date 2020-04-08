@@ -1,4 +1,4 @@
-# Test reporting
+# Test reports
 
 - [Implementation Report for the Processing of Publication and Audiobooks Manifests](https://w3c.github.io/publ-tests/test_reports/manifest_processing/index.html).
 - [Implementation report for the Processing of Table of Contents](https://w3c.github.io/publ-tests/test_reports/toc_processing/). (This section of the specification is non normative.)
