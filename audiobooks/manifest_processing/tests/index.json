@@ -5,7 +5,7 @@
     "tests": [
         {
             "section": "§4.2 Table of content",
-            "href": "https://www.w3.org/TR/audiobooks/#audio-properties",
+            "href": "https://www.w3.org/TR/audiobooks/#audio-toc",
             "tests": [
                 {
                     "id": "a4.2.01",
