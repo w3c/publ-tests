@@ -1,0 +1,15 @@
+{
+  "@context": ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+  "conformsTo": "https://www.w3.org/TR/audiobooks/",
+  "type": "Audiobook",
+  "id": "https://librivox.org/short-poetry-collection-121/",
+  "name": "The Lady of Shalott",
+  "author": "Alfred, Lord Tennyson",
+  "readBy": "J. Grace Pennington",
+  "readingOrder": {
+    "url": "ladyofshalott.mp3",
+    "encodingFormat": "audio/mpeg",
+    "title": "The Lady of Shalott",
+    "duration": "PT452S"
+  }
+}
