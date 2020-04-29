@@ -147,7 +147,7 @@
                     "id": "m4.6.03",
                     "description": "Non-default conformance value can be set that the user agent understands",
                     "actions": "Set 'profile' to the audiobooks profile value",
-                    "errors": "none",
+                    "errors": "series of errors due to the extra manifest requirements on audiobook manifests: missing a11y terms, missing TOC file, missing duration values, no cover.",
                     "media-type": "application/ld+json"
                 }
             ]
