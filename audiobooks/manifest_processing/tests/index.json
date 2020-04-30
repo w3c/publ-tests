@@ -111,7 +111,7 @@
                 {
                     "id": "a5.6.01",
                     "description": "The 'readingOrder' must have at least one audio object",
-                    "actions": "Empty manifest should be returned",
+                    "actions": "A fatal error should be returned",
                     "errors": "Fatal error on missing audio file",
                     "media-type": "application/ld+json"
                 },
