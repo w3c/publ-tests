@@ -31,7 +31,7 @@
                     "id": "m4.2.5.02",
                     "description": "In case of an embedded manifest, 'base' is the value of the base tag of the embedded document",
                     "actions": "The absolute value of the chapter url should be 'https://www.example.org/chapter1.html' in the the document",
-                    "errors": "none",
+                    "errors": "The referring document's URL should be in either the reading order or the resource list",
                     "media-type": "text/html"
                 },
                 {
@@ -147,7 +147,7 @@
                     "id": "m4.6.03",
                     "description": "Non-default conformance value can be set that the user agent understands",
                     "actions": "Set 'profile' to the audiobooks profile value",
-                    "errors": "none",
+                    "errors": "series of errors due to the extra manifest requirements on audiobook manifests: missing a11y terms, missing TOC file, missing duration values, no cover.",
                     "media-type": "application/ld+json"
                 }
             ]
