@@ -530,7 +530,7 @@
                 {
                     "id": "m4.8.1.1.01",
                     "description": "There should not be a repeated definition of cover",
-                    "actions": "The second occurrence of cover should be flagged",
+                    "actions": "The second occurrence of cover generates a validation error",
                     "errors": "Validation error on cover",
                     "media-type": "application/ld+json"
                 },
@@ -557,7 +557,7 @@
                 {
                     "id": "m4.8.1.2.01",
                     "description": "There should be only one page list",
-                    "actions": "The second occurrence of page list should be flagged",
+                    "actions": "The second occurrence of page list generates a validation error",
                     "errors": "Validation error on page list",
                     "media-type": "application/ld+json"
                 }
@@ -570,14 +570,14 @@
                 {
                     "id": "m4.8.1.3.01",
                     "description": "There should be only one TOC reference",
-                    "actions": "The second occurrence of TOC should be flagged",
+                    "actions": "The second occurrence of TOC generates a validation error",
                     "errors": "Validation error on TOC",
                     "media-type": "application/ld+json"
                 },
                 {
                     "id": "m4.8.1.3.02",
                     "description": "There should be only one TOC reference; the rel value comparison is case insensitive",
-                    "actions": "The second occurrence of TOC should be flagged",
+                    "actions": "The second occurrence of generates a validation error",
                     "errors": "Validation error on TOC",
                     "media-type": "application/ld+json"
                 }
