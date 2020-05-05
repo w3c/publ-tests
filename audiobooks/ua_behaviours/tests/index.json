@@ -56,7 +56,7 @@
                     "errors": "none"
                 },
                 {
-                    "id": "a8.2.03",
+                    "id": "a8.2.04",
                     "description": "The user agent provides a method to move between parts of the audiobooks (time increments, chapters, etc.)",
                     "actions": "Audiobook playback can be navigated through",
                     "errors": "none"
