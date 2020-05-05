@@ -1,7 +1,7 @@
 {
-    "name": "audiobooks-js",
-    "description": "Audiobooks parser",
-    "href": "https://marisademeglio.github.io/audiobooks-js",
+    "$name": "audiobooks-js",
+    "$description": "Audiobooks parser",
+    "$href": "https://marisademeglio.github.io/audiobooks-js",
     "m4.01": true,
     "m4.2.5.01": true,
     "m4.2.5.02": true,
