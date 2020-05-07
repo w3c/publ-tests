@@ -1,6 +1,6 @@
 {
   "@context": ["https://schema.org", "https://www.w3.org/ns/pub-context"],
-  "conformsTo" : "https://www.w3/org/TR/audiobooks/",
+  "conformsTo" : "https://www.w3.org/TR/audiobooks/",
   "type": "Audiobook",
   "@id": "https://librivox.org/the-crimson-fairy-book-by-andrew-lang/",
   "name": "The Crimson Fairy Book",
