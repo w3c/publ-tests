@@ -6,6 +6,21 @@
   "name": "The Lady of Shalott",
   "author": "Alfred, Lord Tennyson",
   "readBy": "J. Grace Pennington",
+  "abridged": false,
+  "accessMode": "audio",
+  "accessModeSufficient": [{
+    "type": "ItemList",
+    "itemListElement": ["audio"],
+    "description": "audio"
+  }],
+  "accessibilityFeature": ["readingOrder", "unlocked"],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Audio",
+  "dateModified": "2020-05-07",
+  "datePublished": "1889",
+  "inLanguage": "en", 
+  "readingProgression": "ltr",
+  "duration" : "PT452S",
   "readingOrder": {
     "url": "ladyofshalott.mp3",
     "encodingFormat": "audio/mpeg",
