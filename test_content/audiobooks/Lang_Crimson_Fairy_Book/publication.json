@@ -6,6 +6,20 @@
   "name": "The Crimson Fairy Book",
   "author": "Andrew Lang",
   "readBy" : "Various",
+  "abridged": false,
+  "accessMode": "audio",
+  "accessModeSufficient": [{
+    "type": "ItemList",
+    "itemListElement": ["audio"],
+    "description": "audio"
+  }],
+  "accessibilityFeature": ["readingOrder", "unlocked", "tableOfContents"],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Audio plus table of contents",
+  "dateModified": "2020-05-07",
+  "datePublished": "1889",
+  "inLanguage": "en", 
+  "readingProgression": "ltr",
   "duration" : "PT36279S",
   "readingOrder": [{
     "type" : "LinkedResource",
