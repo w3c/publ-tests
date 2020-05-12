@@ -1,209 +1,278 @@
 {
-  "@context": ["https://schema.org", "https://www.w3.org/ns/pub-context"],
+  "@context": [
+      "https://schema.org",
+      "https://www.w3.org/ns/pub-context"
+  ],
   "conformsTo": "https://www.w3.org/TR/audiobooks/",
   "type": "Audiobook",
-  "@id": "https://librivox.org/the-blue-fairy-book-by-andrew-lang/",
+  "id": "https://librivox.org/the-blue-fairy-book-by-andrew-lang/",
+  "url": "https://w3c.github.io/publ-tests/test_content/audiobooks/Lang_Blue_Fairy_Book/",
   "name": "The Blue Fairy Book",
   "author": "Andrew Lang",
   "readBy": "Various",
-  "readingOrder": [{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_01_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Bronze Ring",
-    "duration": "PT1258S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_02_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Prince Hyacinth and the Dear Little Princess",
-    "duration": "PT1121S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_03_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "East of the Sun and West of the Moon",
-    "duration": "PT1925S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_04_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Yellow Dwarf",
-    "duration": "PT2982S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_05_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Little Red Riding Hood",
-    "duration": "PT237S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_06_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Sleeping Beauty in the Wood",
-    "duration": "PT1284S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_07_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Cinderella; or, The Little Glass Slipper",
-    "duration": "PT1170S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_08_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Aladdin and the Wonderful Lamp",
-    "duration": "PT1993S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_09_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Tale of a Youth who Set Out to Learn What Fear Was",
-    "duration": "PT1175S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_10_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Rumpelstiltkin",
-    "duration": "PT475S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_11_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Beauty and the Beast",
-    "duration": "PT3081S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_12_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Master-Maid",
-    "duration": "PT2470S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_13_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Why the Sea is Salt",
-    "duration": "PT655S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_14_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Master Cat; or, Puss in Boots",
-    "duration": "PT532S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_15_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Felicia and the Pot Pinks",
-    "duration": "PT1173S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_16_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The White Cat",
-    "duration": "PT2295S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_17_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Water-Lily. The Gold Spinners",
-    "duration": "PT929S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_18_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Terrible Head",
-    "duration": "PT1350S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_19_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Story of Pretty Goldilocks",
-    "duration": "PT1742S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_20_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The History of Whittington",
-    "duration": "PT1029S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_21_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Wonderful Sheep",
-    "duration": "PT1747S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_22_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Little Thumb",
-    "duration": "PT1353S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_23_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Forty Thieves",
-    "duration": "PT1105S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_24_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Hansel and Gretel",
-    "duration": "PT1130S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_25_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Snow White and Rose Red",
-    "duration": "PT744S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_26_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Goose-Girl",
-    "duration": "PT723S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_27_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Toads and Diamonds",
-    "duration": "PT325S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_28_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Prince Darling",
-    "duration": "PT1348S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_29_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Blue Beard",
-    "duration": "PT599S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_30_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "Trusty John",
-    "duration": "PT1379S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_31_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Brave Little Tailor",
-    "duration": "PT1487S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_32_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "A Voyage to Lilliput",
-    "duration": "PT2495S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_33_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Princess on the Glass Hill",
-    "duration": "PT1252S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_34_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Story of Prince Ahmed and the Fairy Paribanou",
-    "duration": "PT4153S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_35_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The History of Jack the Giant Killer",
-    "duration": "PT585S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_36_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Black Bull of Norway",
-    "duration": "PT737S"
-    },{
-    "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_37_lang_64kb.mp3",
-    "encodingFormat": "audio/mpeg",
-    "title": "The Red Etin",
-    "duration": "PT809S"
-  }],
-  "resources": [{
-    "url": "https://ia800705.us.archive.org/35/items/blue_fairy_book_0707_librivox/Blue_Fairy_Book_1004.jpg",
-    "encodingFormat": "image/jpeg",
-    "rel": "cover"
-    },{
-    "url": "toc.html",
-    "encodingFormat": "text/html",
-    "rel": "contents",
-    "name": "Table of Contents"
-    },{
-    "url": "index.html",
-    "encodingFormat": "text/html",
-    "name": "Primary Entry Page"
-    }]
+  "abridged": false,
+  "accessMode": "audio",
+  "accessModeSufficient": [
+      {
+          "type": "ItemList",
+          "itemListElement": [
+              "audio"
+          ],
+          "description": "audio"
+      }
+  ],
+  "accessibilityFeature": [
+      "readingOrder",
+      "unlocked",
+      "tableOfContents"
+  ],
+  "accessibilityHazard": "none",
+  "accessibilitySummary": "Audio plus table of contents",
+  "dateModified": "2020-05-07",
+  "datePublished": "1889",
+  "inLanguage": "en",
+  "readingProgression": "ltr",
+  "duration": "PT50864.484S",
+  "readingOrder": [
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_01_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Bronze Ring",
+          "duration": "PT1258.371S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_02_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Prince Hyacinth and the Dear Little Princess",
+          "duration": "PT1121.567S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_03_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "East of the Sun and West of the Moon",
+          "duration": "PT1925.773S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_04_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Yellow Dwarf",
+          "duration": "PT2983.001S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_05_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Little Red Riding Hood",
+          "duration": "PT237.375S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_06_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Sleeping Beauty in the Wood",
+          "duration": "PT1284.989S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_07_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Cinderella; or, The Little Glass Slipper",
+          "duration": "PT1170.390S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_08_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Aladdin and the Wonderful Lamp",
+          "duration": "PT1993.482S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_09_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Tale of a Youth who Set Out to Learn What Fear Was",
+          "duration": "PT1175.118S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_10_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Rumpelstiltkin",
+          "duration": "PT475.925S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_11_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Beauty and the Beast",
+          "duration": "PT3081.718S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_12_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Master-Maid",
+          "duration": "PT2470.243S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_13_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Why the Sea is Salt",
+          "duration": "PT655.700S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_14_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Master Cat; or, Puss in Boots",
+          "duration": "PT532.715S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_15_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Felicia and the Pot Pinks",
+          "duration": "PT1173.838S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_16_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The White Cat",
+          "duration": "PT2295.719S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_17_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Water-Lily. The Gold Spinners",
+          "duration": "PT929.907S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_18_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Terrible Head",
+          "duration": "PT1350.113S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_19_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Story of Pretty Goldilocks",
+          "duration": "PT1742.054S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_20_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The History of Whittington",
+          "duration": "PT1029.224S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_21_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Wonderful Sheep",
+          "duration": "PT1747.148S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_22_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Little Thumb",
+          "duration": "PT1353.953S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_23_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Forty Thieves",
+          "duration": "PT1105.528S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_24_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Hansel and Gretel",
+          "duration": "PT1130.188S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_25_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Snow White and Rose Red",
+          "duration": "PT744.438S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_26_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Goose-Girl",
+          "duration": "PT723.931S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_27_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Toads and Diamonds",
+          "duration": "PT325.303S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_28_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Prince Darling",
+          "duration": "PT1348.127S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_29_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Blue Beard",
+          "duration": "PT599.432S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_30_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "Trusty John",
+          "duration": "PT1379.109S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_31_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Brave Little Tailor",
+          "duration": "PT1487.438S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_32_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "A Voyage to Lilliput",
+          "duration": "PT2495.060S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_33_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Princess on the Glass Hill",
+          "duration": "PT1252.467S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_34_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Story of Prince Ahmed and the Fairy Paribanou",
+          "duration": "PT4153.156S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_35_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The History of Jack the Giant Killer",
+          "duration": "PT585.352S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_36_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Black Bull of Norway",
+          "duration": "PT737.463S"
+      },
+      {
+          "url": "http://www.archive.org/download/blue_fairy_book_0707_librivox/bluefairybook_37_lang_64kb.mp3",
+          "encodingFormat": "audio/mpeg",
+          "name": "The Red Etin",
+          "duration": "PT809.169S"
+      }
+  ],
+  "resources": [
+      {
+          "url": "https://ia800705.us.archive.org/35/items/blue_fairy_book_0707_librivox/Blue_Fairy_Book_1004.jpg",
+          "encodingFormat": "image/jpeg",
+          "rel": "cover",
+          "name": "Cover image"
+      },
+      {
+          "url": "index.html",
+          "encodingFormat": "text/html",
+          "name": "Primary Entry Page"
+      },
+      {
+          "url": "toc.html",
+          "encodingFormat": "text/html",
+          "rel": "contents"
+      }
+  ]
 }

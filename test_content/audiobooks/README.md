@@ -6,11 +6,11 @@ This folder contains some content for implementers interested in running the tes
 
 * `Lang_Blue_Fairy_Book`
   * Unpackaged Audiobook with remote resources
-  * Embedded Manifest in a Primary Entry Page w/ a TOC (`index.html`)
-  * Table of Contents provided separately as well (`toc.html`)
+  * Embedded Manifest in the Primary Entry Page (`index.html`)
+  * TOC also in the Primary Entry Page
 * `Lang_Blue_Fairy_Book_alt`
   * Unpackaged Audiobook with remote resources
-  * Embedded Manifest in PEP (`index.html`)
+  * External manifest referenced from PEP (`index.html`)
   * Table of Contents in separate file (`toc.html`)
 * `Lang_Crimson_Fairy_Book`
   * Unpackaged Audiobook with local resources
