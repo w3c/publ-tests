@@ -4,6 +4,8 @@ This folder contains some content for implementers interested in running the tes
 
 ## List of Content Samples
 
+### Unpackaged
+
 * `Lang_Blue_Fairy_Book`
   * Unpackaged Audiobook with remote resources
   * Embedded Manifest in the Primary Entry Page (`index.html`)
@@ -16,9 +18,16 @@ This folder contains some content for implementers interested in running the tes
   * Unpackaged Audiobook with local resources
   * No PEP
   * Table of Contents Provided (`crimson.html`)
-* [Crimson Fairy Book LPF](https://drive.google.com/open?id=1WKeBMd9FTjRnTrGl3iyOuQEfDdV0MQja)
-  * Packaged Audiobook using LPF
-  * Same contents as the previous sample, no PEP, and a toc
 * `Tennyson_Lady_of_Shalott`
   * Unpackaged Audiobook with local resource
+  * Manifest only (no TOC or PEP)
+
+### Packaged as LPF
+
+* [Crimson Fairy Book LPF](https://drive.google.com/file/d/1mh6BOLvf5-Kc9oxm9UQSS2vKCMlgNtUp/view)
+  * Packaged Audiobook using LPF
+  * No PEP
+  * Table of Contents Provided (`crimson.html`)
+* [Lady of Shalott LPF](https://drive.google.com/file/d/1vZa8nEFnL1EvSQenAxJzlWj49BfmoQ-o/view)
+  * Packaged Audiobook using LPF
   * Manifest only (no TOC or PEP)
