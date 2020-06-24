@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:37:35.035Z",
+  "id": "urn:uuid:c5d1f0aa-42d8-45a8-a88f-d4d25d89d72b",
+  "name": "A Midsummer Night's Dream",
+  "author": "William Shakespeare ",
+  "readBy": "Cast",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "midsummer_nights_dream.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "midsummer_0_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "0 - Dramatis Personae",
+      "duration": "PT150S"
+    },
+    {
+      "url": "midsummer_1_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "1 - Act I",
+      "duration": "PT1202S"
+    },
+    {
+      "url": "midsummer_2_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "2 - Act II",
+      "duration": "PT1456S"
+    },
+    {
+      "url": "midsummer_3_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "3 - Act III",
+      "duration": "PT2149S"
+    },
+    {
+      "url": "midsummer_4_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "4 - Act IV",
+      "duration": "PT1023S"
+    },
+    {
+      "url": "midsummer_5_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "5 - Act V",
+      "duration": "PT1487S"
+    }
+  ],
+  "duration": "PT7467S"
+}
