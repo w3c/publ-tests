@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:21:26.370Z",
+  "id": "urn:uuid:4db42735-7a68-4d02-948d-e92d515bc4bf",
+  "name": "All's Well that Ends Well",
+  "author": "William Shakespeare",
+  "readBy": "Cast",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "allswellthatendswell_1204.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "allswell_0_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "0 - Dramatis Personae",
+      "duration": "PT119S"
+    },
+    {
+      "url": "allswell_1_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "1 - Act I",
+      "duration": "PT2051S"
+    },
+    {
+      "url": "allswell_2_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "2 - Act II",
+      "duration": "PT2759S"
+    },
+    {
+      "url": "allswell_3_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "3 - Act III",
+      "duration": "PT1618S"
+    },
+    {
+      "url": "allswell_4_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "4 - Act IV",
+      "duration": "PT2151S"
+    },
+    {
+      "url": "allswell_5_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "5 - Act V",
+      "duration": "PT1625S"
+    }
+  ],
+  "duration": "PT10323S"
+}
