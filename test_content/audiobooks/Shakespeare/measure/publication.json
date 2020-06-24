@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:29:30.442Z",
+  "id": "urn:uuid:07fab3b5-c921-4182-84e7-73aa62a92e06",
+  "name": "Measure for Measure",
+  "author": "William Shakespeare",
+  "readBy": "Cast",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "MeasureForMeasure_1205.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "measureformeasure_act0_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "0 - Dramatis Personae",
+      "duration": "PT110S"
+    },
+    {
+      "url": "measureformeasure_act1_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "1 - Act 1",
+      "duration": "PT1413S"
+    },
+    {
+      "url": "measureformeasure_act2_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "2 - Act 2",
+      "duration": "PT2162S"
+    },
+    {
+      "url": "measureformeasure_act3_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "3 - Act 3",
+      "duration": "PT1905S"
+    },
+    {
+      "url": "measureformeasure_act4_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "4 - Act 4",
+      "duration": "PT1714S"
+    },
+    {
+      "url": "measureformeasure_act5_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "5 - Act 5",
+      "duration": "PT1825S"
+    }
+  ],
+  "duration": "PT9129S"
+}
