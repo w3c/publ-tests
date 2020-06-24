@@ -1,0 +1,90 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:53:55.190Z",
+  "id": "urn:uuid:472c5250-7a4b-4215-8202-d7d820308183",
+  "name": "The Blazing World",
+  "author": [
+    "Margaret Cavendish",
+    "Duchess of Newcastle"
+  ],
+  "readBy": "Sarah Terry",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "Blazing_World_1406.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "blazingworld_00_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "00 - Introduction",
+      "duration": "PT217S"
+    },
+    {
+      "url": "blazingworld_01_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "01 - Part 1, section 1",
+      "duration": "PT1857S"
+    },
+    {
+      "url": "blazingworld_02_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "02 - Part 1, section 2",
+      "duration": "PT1768S"
+    },
+    {
+      "url": "blazingworld_03_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "03 - Part 1, section 3",
+      "duration": "PT1894S"
+    },
+    {
+      "url": "blazingworld_04_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "04 - Part 1, section 4",
+      "duration": "PT1994S"
+    },
+    {
+      "url": "blazingworld_05_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "05 - Part 1, section 5",
+      "duration": "PT1751S"
+    },
+    {
+      "url": "blazingworld_06_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "06 - Part 1, section 6",
+      "duration": "PT2021S"
+    },
+    {
+      "url": "blazingworld_07_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "07 - Part 2, section 1",
+      "duration": "PT1439S"
+    },
+    {
+      "url": "blazingworld_08_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "08 - Part 2, section 2",
+      "duration": "PT1434S"
+    },
+    {
+      "url": "blazingworld_09_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "09 - Epilogue",
+      "duration": "PT196S"
+    }
+  ],
+  "duration": "PT14571S"
+}
