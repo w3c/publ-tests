@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:27:31.316Z",
+  "id": "urn:uuid:3b4155f9-3b19-417d-b997-527deea93bf9",
+  "name": "As You Like It",
+  "author": "William Shakespeare",
+  "readBy": "Cast",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "asyou_likeit_1101.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "asyoulikeit_0_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "0 - Dramatis personae",
+      "duration": "PT125S"
+    },
+    {
+      "url": "asyoulikeit_1_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "1 - Act I",
+      "duration": "PT1762S"
+    },
+    {
+      "url": "asyoulikeit_2_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "2 - Act II",
+      "duration": "PT1799S"
+    },
+    {
+      "url": "asyoulikeit_3_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "3 - Act III",
+      "duration": "PT2188S"
+    },
+    {
+      "url": "asyoulikeit_4_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "4 - Act IV",
+      "duration": "PT1165S"
+    },
+    {
+      "url": "asyoulikeit_5_shakespeare_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "5 - Act V",
+      "duration": "PT1569S"
+    }
+  ],
+  "duration": "PT8608S"
+}
