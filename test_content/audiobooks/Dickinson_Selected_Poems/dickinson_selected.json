@@ -1,0 +1,183 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:55:22.876Z",
+  "id": "urn:uuid:49fa8ddc-f873-4c74-8703-d99fd0371c88",
+  "name": "Selected Poems of Emily Dickinson",
+  "author": "Emily Dickinson",
+  "readBy": "Becky Miller",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "Selected_Poems_Emily_Dickinson_1108.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "01-soul_selects_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "01 The Soul Selects Her Own Society",
+      "duration": "PT59S"
+    },
+    {
+      "url": "02-after_great_pain_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "02 After Great Pain",
+      "duration": "PT62S"
+    },
+    {
+      "url": "03-hope_is_the_thing_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "03 Hope is the Thing with Feathers",
+      "duration": "PT50S"
+    },
+    {
+      "url": "04-i_never_hear_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "04 I Never Hear the Word Escape",
+      "duration": "PT36S"
+    },
+    {
+      "url": "05-there_is_no_frigate_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "05 There is No Frigate Like a Book",
+      "duration": "PT38S"
+    },
+    {
+      "url": "06-because_i_could_not_stop_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "06 Because I Could Not Stop for Death",
+      "duration": "PT73S"
+    },
+    {
+      "url": "07-of_all_the_sounds_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "07 Of All The Sounds Dispatched Abroad",
+      "duration": "PT73S"
+    },
+    {
+      "url": "08-success_is_counted_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "08 Success is Counted Sweetest",
+      "duration": "PT43S"
+    },
+    {
+      "url": "09-if_i_can_stop_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "09 If I Can Stop One Heart From Breaking",
+      "duration": "PT35S"
+    },
+    {
+      "url": "10-to_fight_aloud_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "10 To Fight Aloud",
+      "duration": "PT46S"
+    },
+    {
+      "url": "11-pain_has_an_element_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "11 Pain Has an Element of Blank",
+      "duration": "PT37S"
+    },
+    {
+      "url": "12-i_can_wade_grief_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "12 I Can Wade Grief",
+      "duration": "PT51S"
+    },
+    {
+      "url": "13-for_each_ecstatic_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "13 For Each Ecstatic Instant",
+      "duration": "PT39S"
+    },
+    {
+      "url": "14-i_meant_to_have_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "14 I Meant To Have But Modest Needs",
+      "duration": "PT90S"
+    },
+    {
+      "url": "15-thought_went_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "15 A Thought Went Up My Mind",
+      "duration": "PT49S"
+    },
+    {
+      "url": "16-is_heaven_a_physician_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "16 Is Heaven a Physician",
+      "duration": "PT34S"
+    },
+    {
+      "url": "17-poor_torn_heart_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "17 A Poor Torn Heart",
+      "duration": "PT58S"
+    },
+    {
+      "url": "18-i_should_have_been_too_glad_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "18 I Should Have Been Too Glad",
+      "duration": "PT82S"
+    },
+    {
+      "url": "19-each_life_converges_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "19 Each Life Converges",
+      "duration": "PT61S"
+    },
+    {
+      "url": "20-my_life_closed_twice_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "20 My Life Closed Twice",
+      "duration": "PT42S"
+    },
+    {
+      "url": "21-i_felt_a_cleavage_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "21 I Felt a Cleavage in my Mind",
+      "duration": "PT45S"
+    },
+    {
+      "url": "22-if_recollecting_were_forgetting_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "22 If Recollecting Were Forgetting",
+      "duration": "PT39S"
+    },
+    {
+      "url": "23-brain_is_wider_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "23 The Brain is Wider Than the Sky",
+      "duration": "PT58S"
+    },
+    {
+      "url": "24-softened_by_times_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "24 Softened by Time's Consummate Plush",
+      "duration": "PT50S"
+    },
+    {
+      "url": "25-i_had_no_time_dickinson_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "25 I Had No Time to Hate",
+      "duration": "PT21S"
+    }
+  ],
+  "duration": "PT1271S"
+}
