@@ -21,6 +21,9 @@ This folder contains some content for implementers interested in running the tes
 * `Tennyson_Lady_of_Shalott`
   * Unpackaged Audiobook with local resource
   * Manifest only (no TOC or PEP)
+* `Dickinson_Selected_Poems`
+  * Unpackaged Audiobook with local resources
+  * Manifest only (no TOC or PEP)
 
 ### Packaged as LPF
 
@@ -31,3 +34,12 @@ This folder contains some content for implementers interested in running the tes
 * [Lady of Shalott LPF](https://drive.google.com/file/d/1vZa8nEFnL1EvSQenAxJzlWj49BfmoQ-o/view)
   * Packaged Audiobook using LPF
   * Manifest only (no TOC or PEP)
+* `Wilde_Earnest`
+  * Packaged Audiobook using LPF
+  * Manifest with TOC and PEP, Supplemental Content (HTML)
+* `Cavendish_Blazing_World`
+  * Packaged Audiobook using LPF
+  * Manifest with PEP and TOC
+* `Shakespeare` - (All's Well That Ends Well, As You Like It, Measure for Measure, and A Midsummer Night's Dream)
+  * Packaged Audiobooks using LPF
+  * Manifest with TOC and PEP 

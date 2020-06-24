@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "type": "Audiobook",
+  "dateModified": "2020-06-19T18:51:38.697Z",
+  "id": "urn:uuid:ce4baaff-dc94-416f-9051-8f29508a35e8",
+  "name": "The Importance of Being Earnest",
+  "author": "Oscar Wilde",
+  "readBy": "Cast",
+  "publisher": "Librivox",
+  "inLanguage": "en",
+  "datePublished": "2020-06-19",
+  "resources": [
+    {
+      "url": "Importance_Being_Earnest_1105.jpg",
+      "encodingFormat": "image/jpeg",
+      "name": "Cover",
+      "rel": "cover"
+    },
+    {
+      "url": "index.html",
+      "encodingFormat": "text/html",
+      "name": "Contents",
+      "rel": "contents"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "importanceofbeingearnest_1_wilde_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "1 - Act 1",
+      "duration": "PT2709S"
+    },
+    {
+      "url": "importanceofbeingearnest_2_wilde_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "2 - Act 2",
+      "duration": "PT3183S"
+    },
+    {
+      "url": "importanceofbeingearnest_3_wilde_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "name": "3 - Act 3",
+      "duration": "PT1971S"
+    }
+  ],
+  "duration": "PT7863S"
+}
