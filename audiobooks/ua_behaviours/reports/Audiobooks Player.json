@@ -1,0 +1,15 @@
+{
+    "name": "audiobooks-player",
+    "description": "Audiobooks Player, Demo Implementation",
+    "href": "https://marisademeglio.github.io/worlds-best-audiobook",
+    "a8.1.01": true,
+    "a8.1.02": true,
+    "a8.1.03": true,
+    "a8.1.04": false,
+    "a8.2.01": true,
+    "a8.2.02": true,
+    "a8.2.03": true,
+    "a8.2.04": true,
+    "a8.3.01": false,
+    "a8.3.02": false
+  }
