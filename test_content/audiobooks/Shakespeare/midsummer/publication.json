@@ -3,7 +3,7 @@
     "https://schema.org",
     "https://www.w3.org/ns/pub-context"
   ],
-  "conformsTo": "https://www.w3/org/TR/audiobooks/",
+  "conformsTo": "https://www.w3.org/TR/audiobooks/",
   "type": "Audiobook",
   "dateModified": "2020-06-19T18:37:35.035Z",
   "id": "urn:uuid:c5d1f0aa-42d8-45a8-a88f-d4d25d89d72b",
