@@ -1,4 +1,4 @@
-# Test suite for the Lightweightt Packaging Format
+# Test suite for the Lightweight Packaging Format
 
 ## Content
 
