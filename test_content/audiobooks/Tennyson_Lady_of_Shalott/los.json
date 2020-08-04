@@ -21,10 +21,10 @@
   "inLanguage": "en", 
   "readingProgression": "ltr",
   "duration" : "PT452S",
-  "readingOrder": {
+  "readingOrder": [{
     "url": "ladyofshalott.mp3",
     "encodingFormat": "audio/mpeg",
     "name": "The Lady of Shalott",
     "duration": "PT452S"
-  }
+  }]
 }
