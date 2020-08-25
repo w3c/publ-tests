@@ -1,6 +1,6 @@
 {
     "$name"        : "PubManifest",
-    "$description" : "Test implementation of the processing algorithm in Typescript.",
+    "$description" : "Implementation in Typescript that was used to debug the processing algorithm while specifying it. Not a reading system per se, although could be used as part of an implementation.",
     "$href"         : "https://github.com/iherman/PubManifest/",
     "m4.01"        : true,
     "m4.3.01"      : true,
