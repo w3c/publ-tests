@@ -1,6 +1,6 @@
 {
     "$name"        : "PlayBooks",
-    "$description" : "Test implementation from Google Play Books ingest pipeline Unit Tests.",
+    "$description" : "Google Play Books - Results from implementing an audiobook processor in the content ingestion pipeline.",
     "m4.01"        : true,
     "m4.3.01"      : true,
     "m4.3.02"      : true,
