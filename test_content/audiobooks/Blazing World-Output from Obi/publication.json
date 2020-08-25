@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://www.w3.org/ns/pub-context"
+  ],
+  "conformsTo": "https://www.w3.org/TR/audiobooks/",
+  "type": "Audiobook",
+  "id": "e0c92799-0404-4649-8663-4b436d31aca8",
+  "name": "Blazing World",
+  "author": "Creator name",
+  "readBy": "Reader's name",
+  "publisher": "Publisher-name",
+  "inLanguage": "en",
+  "datePublished": "2020-08-24",
+  "duration": "PT14571S",
+  "accessibilityFeature": [
+    "readingOrder",
+    "tableOfContents"
+  ],
+  "accessibilitySummary": "This is an audio book with table of contents.",
+  "accessMode": [
+    "textual",
+    "auditory"
+  ],
+  "accessModeSufficient": [
+    {
+      "type": "ItemList",
+      "itemListElement": [
+        "auditory"
+      ],
+      "description": "All content in audio"
+    }
+  ],
+  "resources": [
+    {
+      "rel": "cover",
+      "url": "cover.html",
+      "encodingFormat": "text/html",
+      "name": "Cover"
+    },
+    {
+      "rel": "contents",
+      "url": "index.html",
+      "encodingFormat": "text/html"
+    }
+  ],
+  "readingOrder": [
+    {
+      "url": "aud001_blazingworld_00_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT217S",
+      "name": "blazingworld_00_cavendish_64kb"
+    },
+    {
+      "url": "aud002_Part_1.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1S",
+      "name": "Part 1"
+    },
+    {
+      "url": "aud003_blazingworld_01_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1857S",
+      "name": "blazingworld_01_cavendish_64kb"
+    },
+    {
+      "url": "aud004_blazingworld_02_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1767S",
+      "name": "blazingworld_02_cavendish_64kb"
+    },
+    {
+      "url": "aud005_blazingworld_03_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1894S",
+      "name": "blazingworld_03_cavendish_64kb"
+    },
+    {
+      "url": "aud006_blazingworld_04_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1993S",
+      "name": "blazingworld_04_cavendish_64kb"
+    },
+    {
+      "url": "aud007_blazingworld_05_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1751S",
+      "name": "blazingworld_05_cavendish_64kb"
+    },
+    {
+      "url": "aud008_blazingworld_06_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT2021S",
+      "name": "blazingworld_06_cavendish_64kb"
+    },
+    {
+      "url": "aud009_Part_2.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1S",
+      "name": "Part 2"
+    },
+    {
+      "url": "aud010_blazingworld_07_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1439S",
+      "name": "blazingworld_07_cavendish_64kb"
+    },
+    {
+      "url": "aud011_blazingworld_08_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT1434S",
+      "name": "blazingworld_08_cavendish_64kb"
+    },
+    {
+      "url": "aud012_blazingworld_09_cavendish_64kb.mp3",
+      "encodingFormat": "audio/mpeg",
+      "duration": "PT196S",
+      "name": "blazingworld_09_cavendish_64kb"
+    }
+  ]
+}
