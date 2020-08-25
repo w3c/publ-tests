@@ -1,6 +1,6 @@
 {
     "$name"        : "Colibrio Reader Framework",
-    "$description" : "Result of unit tests run om our WPublications module",
+    "$description" : "Result from unit tests run on our WPublications module",
     "$href"         : "https://colibrio.com",
     "m4.01": "true",
     "m4.2.5.01": "true",
