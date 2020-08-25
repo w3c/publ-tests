@@ -1,6 +1,6 @@
 {
     "$name"        : "Manifest2Internal",
-    "$description" : "Test implementation of the processing algorithm in JavaScript.",
+    "$description" : "Reference implementation of the manifest processing algorithm in JavaScript. This code was used in the development and debugging of the specification. It is not a real-world user agent.",
     "$href"        : "https://github.com/w3c/pub-manifest/tree/master/experiments/manifest-to-internal-processor",
     "m4.01"        : true,
     "m4.2.5.01"    : true,
