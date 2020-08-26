@@ -1,6 +1,6 @@
 {
     "$name"        : "Colibrio Reader Framework",
-    "$description" : "Result from unit tests run on our WPublications module",
+    "$description" : "This Publication Manifest implementation is part of the Colibrio Reader Framework SDK version 1.0. We aim at being a reference implementation and will keep it spec compliant.",
     "$href"         : "https://colibrio.com",
     "m4.01": "true",
     "m4.2.5.01": "true",

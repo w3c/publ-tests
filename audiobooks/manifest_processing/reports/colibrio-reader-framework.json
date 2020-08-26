@@ -1,6 +1,6 @@
 {
     "$name"        : "Colibrio Reader Framework",
-    "$description" : "Result from unit tests run on our WPAudiobook module",
+    "$description" : "This Audiobooks implementation is part of the Colibrio Reader Framework SDK version 1.0. We aim at being a reference implementation and will keep it spec compliant.",
     "$href"         : "https://colibrio.com",
     "a4.2.01": "true",
     "a4.2.02": "true",
