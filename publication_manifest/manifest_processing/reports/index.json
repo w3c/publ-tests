@@ -2,5 +2,6 @@
     "PubManifest",
     "Manifest2Internal",
     "audiobooks-js",
-    "PlayBooks"
+    "PlayBooks",
+    "colibrio-reader-framework"
 ]

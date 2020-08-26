@@ -1,5 +1,6 @@
 [
     "PubManifest",
     "Manifest2Internal",
-    "audiobooks-js"
+    "audiobooks-js",
+    "colibrio-reader-framework"
 ]

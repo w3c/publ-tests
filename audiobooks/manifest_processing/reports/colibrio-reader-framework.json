@@ -1,0 +1,20 @@
+{
+    "$name"        : "Colibrio Reader Framework",
+    "$description" : "This Audiobooks implementation is part of the Colibrio Reader Framework SDK version 1.0. We aim at being a reference implementation and will keep it spec compliant.",
+    "$href"         : "https://colibrio.com",
+    "a4.2.01": true,
+    "a4.2.02": true,
+    "a4.2.03": true,
+    "a4.2.04": true,
+    "a4.2.05": true,
+    "a5.01": true,
+    "a5.02": true,
+    "a5.4.01": true,
+    "a5.5.01": true,
+    "a5.5.02": true,
+    "a5.5.03": true,
+    "a5.6.01": true,
+    "a5.6.02": true,
+    "a5.7.01": true,
+    "a5.7.02": true
+}
