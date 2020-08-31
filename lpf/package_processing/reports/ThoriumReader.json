@@ -1,0 +1,16 @@
+{
+    "$name"        : "Thorium Reader",
+    "$description" : "Thorium Reader v1.3 plays LPF formatted publications if they do not rely on entry pages; an HTML TOC is not processed.",
+    "$href"        : "https://www.edrlab.org/software/thorium-reader/",
+    "l4.01"      : true,
+    "l5.01"      : true,
+    "l5.02"      : true,
+    "l6.01"      : true,
+    "l6.02"      : false,
+    "l6.03"      : false,
+    "l6.04"      : true,
+    "l6.05"      : true,
+    "l6.06"      : true,
+    "l6.07"      : true,
+    "l7.01"      : false
+}
