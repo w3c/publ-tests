@@ -3,5 +3,6 @@
     "Manifest2Internal",
     "audiobooks-js",
     "PlayBooks",
-    "colibrio-reader-framework"
+    "colibrio-reader-framework",
+    "ThoriumReader"
 ]
