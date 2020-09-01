@@ -1,11 +1,11 @@
 {
   "date": "2020-01-05",
   "title": "Tests related to LPF processing",
-  "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/",
+  "href": "https://www.w3.org/TR/2020/NOTE-lpf-20200319/",
   "tests": [
       {
           "section": "§4 Packaging format",
-          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-zip",
+          "href": "https://www.w3.org/TR/2020/NOTE-lpf-20200319/#sec-zip",
           "tests": [
               {
                   "id": "l4.01",
@@ -19,7 +19,7 @@
       },
       {
           "section": "§5. Compression of resources",
-          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-compression",
+          "href": "https://www.w3.org/TR/2020/NOTE-lpf-20200319/#sec-compression",
           "tests": [
               {
                   "id": "l5.01",
@@ -39,7 +39,7 @@
       },
       {
           "section": "§6 File and directory structure",
-          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-structure",
+          "href": "https://www.w3.org/TR/2020/NOTE-lpf-20200319/#sec-structure",
           "tests": [
               {
                   "id": "l6.01",
@@ -94,7 +94,7 @@
       },
       {
           "section": "§7 Obtaining a publication manifest",
-          "href": "https://www.w3.org/TR/2019/NOTE-lpf-20191205/#sec-obtaining-manifest",
+          "href": "https://www.w3.org/TR/2020/NOTE-lpf-20200319/#sec-obtaining-manifest",
           "tests": [
               {
                   "id": "l7.01",
