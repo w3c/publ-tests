@@ -2,5 +2,6 @@
     "PubManifest",
     "Manifest2Internal",
     "audiobooks-js",
-    "colibrio-reader-framework"
+    "colibrio-reader-framework",
+    "ThoriumReader"
 ]
