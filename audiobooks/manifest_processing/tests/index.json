@@ -34,13 +34,6 @@
                     "actions": "Output the manifest",
                     "errors": "none",
                     "media-type": "text/html"
-                },
-                {
-                    "id": "a4.2.05",
-                    "description": "There must be a TOC, either in the manifest (linked or embedded) or in the Primary Entry Page",
-                    "actions": "Output the manifest",
-                    "errors": "Validation error on missing TOC",
-                    "media-type": "text/html"
                 }
             ]
         },
