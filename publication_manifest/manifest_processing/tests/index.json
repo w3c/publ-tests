@@ -442,7 +442,7 @@
                 {
                     "id": "m4.7.2.2.03",
                     "description": "Duplicate URLs generate warning but stay in 'resources''",
-                    "actions": "The third entry in 'resources' is removed from the final list",
+                    "actions": "The output does not change",
                     "errors": "Validation error on repeated resources",
                     "media-type": "application/ld+json"
                 }
