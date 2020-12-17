@@ -1,0 +1,9 @@
+{
+    "$name"        : "PlayBooks",
+    "$description" : "Google Play Books - Results from implementing an audiobook processor in the content ingestion pipeline.",
+    "a5.01"        : true,
+    "a5.02"        : true,
+    "a5.4.01"      : true,
+    "a5.5.01"      : true,
+    "a5.5.02"      : true
+}
