@@ -1,6 +1,7 @@
 {
     "$name"        : "PlayBooks",
     "$description" : "Google Play Books - Results from implementing an audiobook processor in the content ingestion pipeline.",
+    "$href"        : "https://play.google.com/books/publish/",
     "m4.01"        : true,
     "m4.3.01"      : true,
     "m4.3.02"      : true,
