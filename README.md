@@ -21,7 +21,7 @@ The repository contains different test suites that are used for various projects
 
 ## Contributing to the Repository
 
-Use the standard fork, branch, and pull request workflow to propose changes to the tests or their descriptions. Please make branch names informative—by including the issue or bug number for example.
+Use the standard fork, branch, and pull request workflow to propose changes to the tests or their descriptions. Please make branch names informative, by including the issue or bug number for example.
 
 Editorial changes that improve the readability of the descriptions and reports or correct spelling or grammatical mistakes are welcome.
 
