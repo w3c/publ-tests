@@ -229,7 +229,7 @@
 				{
 					"id": "c2.ignored.03",
 					"description": "TOC branch with list of ignored elements",
-					"actions": "Table of contents is null",
+					"actions": "TOC with a single link to Part 1",
 					"errors": "none",
 					"media-type": "text/html"
 				},
